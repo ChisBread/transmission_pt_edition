@@ -32,7 +32,7 @@ enum
 static bool skipHashCheck = false;
 void tr_skipHash(void)
 {
-    skipHashCheck = true;
+    skipHashCheck = !skipHashCheck;
 }
 static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 {
@@ -56,8 +56,11 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
     tr_logAddTorDbg(tor, "%s", "verifying torrent...");
     tr_torrentSetChecked(tor, 0);
 
+    bool skipHashCheckFlag = false;
     while (!*stopFlag && pieceIndex < tor->info.pieceCount)
     {
+        // skip in [1, N-1]
+        skipHashCheckFlag = skipHashCheck && (pieceIndex > 0 && pieceIndex+1 < tor->info.pieceCount);
         uint64_t leftInPiece;
         uint64_t bytesThisPass;
         uint64_t leftInFile;
@@ -70,7 +73,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
         }
 
         /* if we're starting a new file... */
-        if (!skipHashCheck && filePos == 0 && fd == TR_BAD_SYS_FILE && fileIndex != prevFileIndex)
+        if (filePos == 0 && fd == TR_BAD_SYS_FILE && fileIndex != prevFileIndex)
         {
             char* filename = tr_torrentFindFile(tor, fileIndex);
             fd = filename == NULL ? TR_BAD_SYS_FILE : tr_sys_file_open(filename, TR_SYS_FILE_READ | TR_SYS_FILE_SEQUENTIAL, 0,
@@ -84,12 +87,12 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
         leftInFile = file->length - filePos;
         bytesThisPass = MIN(leftInFile, leftInPiece);
         bytesThisPass = MIN(bytesThisPass, buflen);
-
+        /* skip hash check when left in file not equal zero */
         /* read a bit */
         if (fd != TR_BAD_SYS_FILE)
         {
             uint64_t numRead;
-            if (!skipHashCheck && tr_sys_file_read_at(fd, buffer, bytesThisPass, filePos, &numRead, NULL) && numRead > 0)
+            if (!skipHashCheckFlag && tr_sys_file_read_at(fd, buffer, bytesThisPass, filePos, &numRead, NULL) && numRead > 0)
             {
                 bytesThisPass = numRead;
                 tr_sha1_update(sha, buffer, bytesThisPass);
@@ -112,7 +115,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 
             tr_sha1_final(sha, hash);
 
-            hasPiece = skipHashCheck || memcmp(hash, tor->info.pieces[pieceIndex].hash, SHA_DIGEST_LENGTH) == 0;
+            hasPiece = skipHashCheckFlag || memcmp(hash, tor->info.pieces[pieceIndex].hash, SHA_DIGEST_LENGTH) == 0;
 
             if (hasPiece || hadPiece)
             {
@@ -152,8 +155,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
     }
 	if (skipHashCheck)
 	{
-		skipHashCheck = false;
-		tr_logAddTorInfo (tor, "%s", _("Skipped hash check"));
+		tr_logAddTorInfo (tor, "%s", _("Verify with fast hash check"));
 	}
     /* cleanup */
     if (fd != TR_BAD_SYS_FILE)
