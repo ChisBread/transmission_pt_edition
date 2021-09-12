@@ -1,0 +1,2433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Mike Gelfand <mikedld@mikedld.com>, 2017
+# Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail.com>, 2017
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 18:55+0300\n"
+"PO-Revision-Date: 2017-01-26 19:47+0000\n"
+"Last-Translator: Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail.com>, 2017\n"
+"Language-Team: Serbian (https://www.transifex.com/transmissionbt/teams/33778/sr/)\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../cli/cli.c:114 ../gtk/util.c:92 ../libtransmission/utils.c:1694
+msgid "None"
+msgstr "ништа"
+
+#: ../gtk/actions.c:31
+msgid "Sort by _Activity"
+msgstr "Поређај по _активности"
+
+#: ../gtk/actions.c:32
+msgid "Sort by _Name"
+msgstr "Поређај по _називу"
+
+#: ../gtk/actions.c:33
+msgid "Sort by _Progress"
+msgstr "Поређај по на_претку"
+
+#: ../gtk/actions.c:34
+msgid "Sort by _Queue"
+msgstr "Поређај по _чекању"
+
+#: ../gtk/actions.c:35
+msgid "Sort by Rati_o"
+msgstr "Поређај по _односу размене"
+
+#: ../gtk/actions.c:36
+msgid "Sort by Stat_e"
+msgstr "Поређај по _стању"
+
+#: ../gtk/actions.c:37
+msgid "Sort by A_ge"
+msgstr "Поређај по ста_рости"
+
+#: ../gtk/actions.c:38
+msgid "Sort by Time _Left"
+msgstr "Поређај по преосталом _времену"
+
+#: ../gtk/actions.c:39
+msgid "Sort by Si_ze"
+msgstr "Поређај по ве_личини"
+
+#: ../gtk/actions.c:53
+msgid "_Show Transmission"
+msgstr "Прикажи _Трансмисију"
+
+#: ../gtk/actions.c:54
+msgid "Message _Log"
+msgstr "_Дневник рада"
+
+#: ../gtk/actions.c:67
+msgid "Enable Alternative Speed _Limits"
+msgstr "Укључи заменско ограничење _брзине"
+
+#: ../gtk/actions.c:68
+msgid "_Compact View"
+msgstr "_Збијени приказ"
+
+#: ../gtk/actions.c:69
+msgid "Re_verse Sort Order"
+msgstr "_Преокрени поредак"
+
+#: ../gtk/actions.c:70
+msgid "_Filterbar"
+msgstr "Трака _пропусника"
+
+#: ../gtk/actions.c:71
+msgid "_Statusbar"
+msgstr "Трака _стања"
+
+#: ../gtk/actions.c:72
+msgid "_Toolbar"
+msgstr "Трака _алата"
+
+#: ../gtk/actions.c:77
+msgid "_File"
+msgstr "_Датотека"
+
+#: ../gtk/actions.c:78
+msgid "_Torrent"
+msgstr "_Торент"
+
+#: ../gtk/actions.c:79
+msgid "_View"
+msgstr "_Преглед"
+
+#: ../gtk/actions.c:80
+msgid "_Sort Torrents By"
+msgstr "Поређај т_оренте по"
+
+#: ../gtk/actions.c:81
+msgid "_Queue"
+msgstr "_Ред"
+
+#: ../gtk/actions.c:82 ../gtk/details.c:2839
+msgid "_Edit"
+msgstr "_Уређивање"
+
+#: ../gtk/actions.c:83
+msgid "_Help"
+msgstr "По_моћ"
+
+#: ../gtk/actions.c:84
+msgid "Copy _Magnet Link to Clipboard"
+msgstr "Умножи магнетну _везу у оставу"
+
+#: ../gtk/actions.c:85
+msgid "Open URL…"
+msgstr "Отвори адресу…"
+
+#: ../gtk/actions.c:85
+msgid "Open _URL…"
+msgstr "Отвори _адресу…"
+
+#: ../gtk/actions.c:86 ../gtk/actions.c:87
+msgid "Open a torrent"
+msgstr "Отворите торент"
+
+#: ../gtk/actions.c:88
+msgid "Start torrent"
+msgstr "Покрените торент"
+
+#: ../gtk/actions.c:88
+msgid "_Start"
+msgstr "_Покрени"
+
+#: ../gtk/actions.c:89
+msgid "Start _Now"
+msgstr "Покрени _сада"
+
+#: ../gtk/actions.c:89
+msgid "Start torrent now"
+msgstr "Сада покрените торент"
+
+#: ../gtk/actions.c:91
+msgid "_Statistics"
+msgstr "_Статистика"
+
+#: ../gtk/actions.c:92
+msgid "_Donate"
+msgstr "_Добровољан прилог"
+
+#: ../gtk/actions.c:93
+msgid "_Verify Local Data"
+msgstr "Провери _месне податке"
+
+#: ../gtk/actions.c:94
+msgid "Pause torrent"
+msgstr "Паузирајте торент"
+
+#: ../gtk/actions.c:94
+msgid "_Pause"
+msgstr "Пау_зирај"
+
+#: ../gtk/actions.c:95
+msgid "Pause all torrents"
+msgstr "Паузирајте све торенте"
+
+#: ../gtk/actions.c:95
+msgid "_Pause All"
+msgstr "Па_узирај све"
+
+#: ../gtk/actions.c:96
+msgid "Start all torrents"
+msgstr "Покрените све торенте"
+
+#: ../gtk/actions.c:96
+msgid "_Start All"
+msgstr "_Покрени све"
+
+#: ../gtk/actions.c:97
+msgid "Set _Location…"
+msgstr "Подеси _путању…"
+
+#: ../gtk/actions.c:98
+msgid "Remove torrent"
+msgstr "Уклоните торент"
+
+#: ../gtk/actions.c:99
+msgid "_Delete Files and Remove"
+msgstr "_Уклони и торент и датотеке"
+
+#: ../gtk/actions.c:100
+msgid "Create a torrent"
+msgstr "Направите торент"
+
+#: ../gtk/actions.c:100
+msgid "_New…"
+msgstr "_Ново…"
+
+#: ../gtk/actions.c:101
+msgid "_Quit"
+msgstr "_Изађи"
+
+#: ../gtk/actions.c:102
+msgid "Select _All"
+msgstr "_Изабери све"
+
+#: ../gtk/actions.c:103
+msgid "Dese_lect All"
+msgstr "_Поништи изабрано"
+
+#: ../gtk/actions.c:105
+msgid "Torrent properties"
+msgstr "Подаци о торенту"
+
+#: ../gtk/actions.c:106
+msgid "Open Fold_er"
+msgstr "_Отвори фасциклу"
+
+#: ../gtk/actions.c:108
+msgid "_Contents"
+msgstr "_Садржај"
+
+#: ../gtk/actions.c:109
+msgid "Ask Tracker for _More Peers"
+msgstr "Затражи од трагача више _парњака"
+
+#: ../gtk/actions.c:110
+msgid "Move to _Top"
+msgstr "Премести на _врх"
+
+#: ../gtk/actions.c:111
+msgid "Move _Up"
+msgstr "Премести на го_ре"
+
+#: ../gtk/actions.c:112
+msgid "Move _Down"
+msgstr "Премести на до_ле"
+
+#: ../gtk/actions.c:113
+msgid "Move to _Bottom"
+msgstr "Премести на _дно"
+
+#: ../gtk/actions.c:114
+msgid "Present Main Window"
+msgstr "Прикажи главни прозор"
+
+#: ../gtk/details.c:486 ../gtk/details.c:497
+msgid "Use global settings"
+msgstr "Користи општа подешавања"
+
+#: ../gtk/details.c:487
+msgid "Seed regardless of ratio"
+msgstr "Сеј без обзира на однос"
+
+#: ../gtk/details.c:488
+msgid "Stop seeding at ratio:"
+msgstr "Прекини сејање при односу:"
+
+#: ../gtk/details.c:498
+msgid "Seed regardless of activity"
+msgstr "Сеј без обзира на активност"
+
+#: ../gtk/details.c:499
+msgid "Stop seeding if idle for N minutes:"
+msgstr "Заустави сејање ако је неактиван N минута:"
+
+#: ../gtk/details.c:517 ../gtk/tr-prefs.c:1253
+msgid "Speed"
+msgstr "Брзина"
+
+#: ../gtk/details.c:519
+msgid "Honor global _limits"
+msgstr "Придржавај се општих _ограничења"
+
+#: ../gtk/details.c:524
+#, c-format
+msgid "Limit _download speed (%s):"
+msgstr "Ограничи брзину _преузимања (%s):"
+
+#: ../gtk/details.c:537
+#, c-format
+msgid "Limit _upload speed (%s):"
+msgstr "Ограничи брзину _слања (%s):"
+
+#: ../gtk/details.c:550 ../gtk/open-dialog.c:368
+msgid "Torrent _priority:"
+msgstr "_Приоритет торента:"
+
+#: ../gtk/details.c:554
+msgid "Seeding Limits"
+msgstr "Ограничења сејања"
+
+#: ../gtk/details.c:564
+msgid "_Ratio:"
+msgstr "Однос _размене:"
+
+#: ../gtk/details.c:573
+msgid "_Idle:"
+msgstr "_Мировање:"
+
+#: ../gtk/details.c:576
+msgid "Peer Connections"
+msgstr "Повезаност са парњацима"
+
+#: ../gtk/details.c:579
+msgid "_Maximum peers:"
+msgstr "Нај_већи број парњака:"
+
+#: ../gtk/details.c:598 ../gtk/torrent-cell-renderer.c:195 ../libtransmission/verify.c:272
+msgid "Queued for verification"
+msgstr "Заказано за проверу"
+
+#: ../gtk/details.c:601
+msgid "Verifying local data"
+msgstr "Проверавам месне податке"
+
+#: ../gtk/details.c:604 ../gtk/torrent-cell-renderer.c:199
+msgid "Queued for download"
+msgstr "Стављени у ред за преузимање"
+
+#: ../gtk/details.c:607 ../gtk/filter.c:586
+msgctxt "Verb"
+msgid "Downloading"
+msgstr "Преузимам"
+
+#: ../gtk/details.c:610 ../gtk/torrent-cell-renderer.c:203
+msgid "Queued for seeding"
+msgstr "Стављени у ред за сејање"
+
+#: ../gtk/details.c:613 ../gtk/filter.c:587
+msgctxt "Verb"
+msgid "Seeding"
+msgstr "Сејем"
+
+#: ../gtk/details.c:616 ../gtk/filter.c:589 ../gtk/torrent-cell-renderer.c:191
+msgid "Finished"
+msgstr "Завршен"
+
+#: ../gtk/details.c:616 ../gtk/filter.c:588 ../gtk/torrent-cell-renderer.c:191
+msgid "Paused"
+msgstr "Паузиран"
+
+#: ../gtk/details.c:653 ../gtk/details.c:733
+msgid "N/A"
+msgstr "Недоступно"
+
+#: ../gtk/details.c:664 ../gtk/file-list.c:636
+msgid "Mixed"
+msgstr "Мешовито"
+
+#: ../gtk/details.c:665
+msgid "No Torrents Selected"
+msgstr "Нема изабраних торента"
+
+#: ../gtk/details.c:695
+msgid "Private to this tracker -- DHT and PEX disabled"
+msgstr "Приватно на овом трагачу — онемогући DHT и PEX"
+
+#: ../gtk/details.c:695
+msgid "Public torrent"
+msgstr "Јавни торент"
+
+#: ../gtk/details.c:739
+#, c-format
+msgid "Created by %1$s"
+msgstr "Приредио „%1$s“"
+
+#: ../gtk/details.c:743
+#, c-format
+msgid "Created on %1$s"
+msgstr "Приређен %1$s"
+
+#: ../gtk/details.c:747
+#, c-format
+msgid "Created by %1$s on %2$s"
+msgstr "Приредио „%1$s“, %2$s"
+
+#: ../gtk/details.c:877
+msgid "Unknown"
+msgstr "Непознато"
+
+#: ../gtk/details.c:919
+#, c-format
+msgid "%1$s (%2$'d piece @ %3$s)"
+msgid_plural "%1$s (%2$'d pieces @ %3$s)"
+msgstr[0] "%1$s (%2$'d део @ %3$s)"
+msgstr[1] "%1$s (%2$'d дела @ %3$s)"
+msgstr[2] "%1$s (%2$'d комада @ %3$s)"
+
+#: ../gtk/details.c:925
+#, c-format
+msgid "%1$s (%2$'d piece)"
+msgid_plural "%1$s (%2$'d pieces)"
+msgstr[0] "%1$s (%2$'d део)"
+msgstr[1] "%1$s (%2$'d дела)"
+msgstr[2] "%1$s (%2$'d комада)"
+
+#: ../gtk/details.c:969
+#, c-format
+msgid "%1$s (%2$s%%)"
+msgstr "%1$s (%2$s%%)"
+
+#: ../gtk/details.c:973
+#, c-format
+msgid "%1$s (%2$s%% of %3$s%% Available)"
+msgstr "%1$s (%2$s%% од %3$s%% је доступно)"
+
+#: ../gtk/details.c:977
+#, c-format
+msgid "%1$s (%2$s%% of %3$s%% Available); %4$s Unverified"
+msgstr "%1$s (%2$s%% од %3$s%% је доступно); %4$s није проверено"
+
+#: ../gtk/details.c:1010
+#, c-format
+msgid "%1$s (+%2$s corrupt)"
+msgstr "%1$s (+%2$s је оштећено)"
+
+#: ../gtk/details.c:1042
+#, c-format
+msgid "%s (Ratio: %s)"
+msgstr "%s (Однос размене: %s)"
+
+#: ../gtk/details.c:1084
+msgid "No errors"
+msgstr "Нема грешака"
+
+#: ../gtk/details.c:1108
+msgid "Never"
+msgstr "Никад"
+
+#: ../gtk/details.c:1116
+msgid "Active now"
+msgstr "Сада је активан"
+
+#: ../gtk/details.c:1122
+#, c-format
+msgid "%1$s ago"
+msgstr "Пре %1$s"
+
+#: ../gtk/details.c:1145
+msgid "Activity"
+msgstr "Активност"
+
+#: ../gtk/details.c:1150
+msgid "Torrent size:"
+msgstr "Величина торента:"
+
+#: ../gtk/details.c:1155
+msgid "Have:"
+msgstr "Имате:"
+
+#: ../gtk/details.c:1160 ../gtk/stats.c:133 ../gtk/stats.c:158
+msgid "Uploaded:"
+msgstr "Послато је:"
+
+#: ../gtk/details.c:1165 ../gtk/stats.c:137 ../gtk/stats.c:162
+msgid "Downloaded:"
+msgstr "Преузето је:"
+
+#: ../gtk/details.c:1170
+msgid "State:"
+msgstr "Стање:"
+
+#: ../gtk/details.c:1175
+msgid "Running time:"
+msgstr "Протекло време:"
+
+#: ../gtk/details.c:1180
+msgid "Remaining time:"
+msgstr "Преостало време:"
+
+#: ../gtk/details.c:1185
+msgid "Last activity:"
+msgstr "Последња активност:"
+
+#: ../gtk/details.c:1189
+msgid "Error:"
+msgstr "Грешка:"
+
+#: ../gtk/details.c:1193
+msgid "Details"
+msgstr "Детаљи"
+
+#: ../gtk/details.c:1197
+msgid "Location:"
+msgstr "Путања:"
+
+#: ../gtk/details.c:1202
+msgid "Hash:"
+msgstr "Хеш:"
+
+#: ../gtk/details.c:1208
+msgid "Privacy:"
+msgstr "Приватност:"
+
+#: ../gtk/details.c:1213
+msgid "Origin:"
+msgstr "Порекло:"
+
+#: ../gtk/details.c:1228
+msgid "Comment:"
+msgstr "Напомена:"
+
+#: ../gtk/details.c:1256
+msgid "Web Seeds"
+msgstr "Веб сејачи"
+
+#: ../gtk/details.c:1260 ../gtk/details.c:1316
+msgid "Down"
+msgstr "Преузимање"
+
+#: ../gtk/details.c:1312
+msgid "Address"
+msgstr "Адреса"
+
+#: ../gtk/details.c:1320
+msgid "Up"
+msgstr "Слање"
+
+#: ../gtk/details.c:1323
+msgid "Client"
+msgstr "Програм"
+
+#: ../gtk/details.c:1326
+msgid "%"
+msgstr "%"
+
+#: ../gtk/details.c:1330
+msgid "Up Reqs"
+msgstr "Понуда"
+
+#: ../gtk/details.c:1334
+msgid "Dn Reqs"
+msgstr "Потражња"
+
+#: ../gtk/details.c:1338
+msgid "Dn Blocks"
+msgstr "Блокови пр."
+
+#: ../gtk/details.c:1342
+msgid "Up Blocks"
+msgstr "Блокови сл."
+
+#: ../gtk/details.c:1346
+msgid "We Cancelled"
+msgstr "Ми смо отказали"
+
+#: ../gtk/details.c:1350
+msgid "They Cancelled"
+msgstr "Они су отказали"
+
+#: ../gtk/details.c:1353
+msgid "Flags"
+msgstr "Обележја"
+
+#: ../gtk/details.c:1770
+msgid "Optimistic unchoke"
+msgstr "Постоји шанса за пренос"
+
+#: ../gtk/details.c:1774
+msgid "Downloading from this peer"
+msgstr "Преузимате од овог парњака"
+
+#: ../gtk/details.c:1778
+msgid "We would download from this peer if they would let us"
+msgstr "Преузимали бисмо од овог парњака ако би нам дозволио"
+
+#: ../gtk/details.c:1782
+msgid "Uploading to peer"
+msgstr "Шаљете овом парњаку"
+
+#: ../gtk/details.c:1786
+msgid "We would upload to this peer if they asked"
+msgstr "Слали бисмо овом парњаку ако би он то затражио"
+
+#: ../gtk/details.c:1790
+msgid "Peer has unchoked us, but we're not interested"
+msgstr "Парњак нас је понудио, али ми нисмо заинтресовани"
+
+#: ../gtk/details.c:1794
+msgid "We unchoked this peer, but they're not interested"
+msgstr "Понудили смо овог парњака, али он није заинтресован"
+
+#: ../gtk/details.c:1798
+msgid "Encrypted connection"
+msgstr "Шифрована веза"
+
+#: ../gtk/details.c:1802
+msgid "Peer was found through Peer Exchange (PEX)"
+msgstr "Парњак је откривен кроз размену парњака (Peer Exchange — PEX)"
+
+#: ../gtk/details.c:1806
+msgid "Peer was found through DHT"
+msgstr "Парњак је пронађен кроз ДХТ"
+
+#: ../gtk/details.c:1810
+msgid "Peer is an incoming connection"
+msgstr "Парњак је надолазећа веза"
+
+#: ../gtk/details.c:1814
+msgid "Peer is connected over µTP"
+msgstr "Парњак је повезан преко μТП-а"
+
+#: ../gtk/details.c:2082 ../gtk/details.c:2854
+msgid "Show _more details"
+msgstr "Покажи _више детаља"
+
+#: ../gtk/details.c:2156
+#, c-format
+msgid "Got a list of %1$s%2$'d peers%3$s %4$s ago"
+msgstr "Добих списак о %1$s%2$'d парњака пре%3$s %4$s"
+
+#: ../gtk/details.c:2161
+#, c-format
+msgid "Peer list request %1$stimed out%2$s %3$s ago; will retry"
+msgstr "Потраживање списка парњака %1$sје истекло пре%2$s %3$s; покушаћу опет"
+
+#: ../gtk/details.c:2166
+#, c-format
+msgid "Got an error %1$s\"%2$s\"%3$s %4$s ago"
+msgstr "Добих грешку %1$s„%2$s“%3$s пре %4$s"
+
+#: ../gtk/details.c:2175
+msgid "No updates scheduled"
+msgstr "Нема заказаних ажурирања"
+
+#: ../gtk/details.c:2181
+#, c-format
+msgid "Asking for more peers in %s"
+msgstr "Потражићу нове парњаке за %s"
+
+#: ../gtk/details.c:2186
+msgid "Queued to ask for more peers"
+msgstr "Потраживање нових парњака на чекању"
+
+#: ../gtk/details.c:2192
+#, c-format
+msgid "Asking for more peers now… <small>%s</small>"
+msgstr "Потражићу нове парњаке сада… <small>%s</small>"
+
+#: ../gtk/details.c:2205
+#, c-format
+msgid "Tracker had %s%'d seeders and %'d leechers%s %s ago"
+msgstr "Трагач је имао %s%'d сејача и %'d пијавица%s пре %s"
+
+#: ../gtk/details.c:2210
+#, c-format
+msgid "Got a scrape error \"%s%s%s\" %s ago"
+msgstr "Добих неповољан исход пре %s: „%s%s%s“"
+
+#: ../gtk/details.c:2223
+#, c-format
+msgid "Asking for peer counts in %s"
+msgstr "Затражићу парњака за %s"
+
+#: ../gtk/details.c:2228
+msgid "Queued to ask for peer counts"
+msgstr "Потраживање парњака учесника на чекању"
+
+#: ../gtk/details.c:2234
+#, c-format
+msgid "Asking for peer counts now… <small>%s</small>"
+msgstr "Затражићу парњака сада за… <small>%s</small>"
+
+#: ../gtk/details.c:2537
+msgid "List contains invalid URLs"
+msgstr "Списак садржи неисправне адресе"
+
+#: ../gtk/details.c:2541 ../gtk/file-list.c:847
+msgid "Please correct the errors and try again."
+msgstr "Исправите грешке и покушајте поново."
+
+#: ../gtk/details.c:2603
+#, c-format
+msgid "%s - Edit Trackers"
+msgstr "%s — Уреди трагаче"
+
+#: ../gtk/details.c:2610
+msgid "Tracker Announce URLs"
+msgstr "Адресе најављивања трагача"
+
+#: ../gtk/details.c:2613 ../gtk/makemeta-ui.c:493
+msgid ""
+"To add a backup URL, add it on the line after the primary URL.\n"
+"To add another primary URL, add it after a blank line."
+msgstr ""
+"Да додате сачувану адресу, додајте је у ред након главне адресе.\n"
+"Да додате још једну главну адресу, додајте је након празног реда."
+
+#: ../gtk/details.c:2713
+#, c-format
+msgid "%s - Add Tracker"
+msgstr "%s — Додај трагача"
+
+#: ../gtk/details.c:2720
+msgid "Tracker"
+msgstr "Трагач"
+
+#: ../gtk/details.c:2726
+msgid "_Announce URL:"
+msgstr "_Адреса најављивања:"
+
+#: ../gtk/details.c:2810 ../gtk/details.c:2967
+msgid "Trackers"
+msgstr "Трагачи"
+
+#: ../gtk/details.c:2834
+msgid "_Add"
+msgstr "_Додај"
+
+#: ../gtk/details.c:2845
+msgid "_Remove"
+msgstr "_Уклони"
+
+#: ../gtk/details.c:2861
+msgid "Show _backup trackers"
+msgstr "Прикажи _сачуване трагаче"
+
+#: ../gtk/details.c:2959 ../gtk/msgwin.c:431
+msgid "Information"
+msgstr "Информације"
+
+#: ../gtk/details.c:2963
+msgid "Peers"
+msgstr "Парњаци"
+
+#: ../gtk/details.c:2972
+msgid "File listing not available for combined torrent properties"
+msgstr "Приказивање списка датотека није доступно за мешовита својства торента"
+
+#: ../gtk/details.c:2976 ../gtk/makemeta-ui.c:442
+msgid "Files"
+msgstr "Датотеке"
+
+#: ../gtk/details.c:2980 ../gtk/tr-prefs.c:1164 ../gtk/tr-window.c:646
+msgid "Options"
+msgstr "Опције"
+
+#: ../gtk/details.c:3002
+#, c-format
+msgid "%s Properties"
+msgstr "„%s“ — својства"
+
+#: ../gtk/details.c:3013
+#, c-format
+msgid "%'d Torrent Properties"
+msgstr "Својства торента „%'d“"
+
+#: ../gtk/dialogs.c:100
+#, c-format
+msgid "Remove torrent?"
+msgid_plural "Remove %d torrents?"
+msgstr[0] "Да уклоним %d торент?"
+msgstr[1] "Да уклоним %d торента?"
+msgstr[2] "Да уклоним %d торената?"
+
+#: ../gtk/dialogs.c:104
+#, c-format
+msgid "Delete this torrent's downloaded files?"
+msgid_plural "Delete these %d torrents' downloaded files?"
+msgstr[0] "Да обришем преузете датотеке овог %d торента?"
+msgstr[1] "Да обришем преузете датотеке ова %d торента?"
+msgstr[2] "Да обришем преузете датотеке ових %d торената?"
+
+#: ../gtk/dialogs.c:113
+msgid "Once removed, continuing the transfer will require the torrent file or magnet link."
+msgid_plural "Once removed, continuing the transfers will require the torrent files or magnet links."
+msgstr[0] "Једном уклоњен, наставак преноса ће захтевати датотеку торента или магнетну везу."
+msgstr[1] "Једном уклоњен, наставак преноса ће захтевати датотеке торената или магнетне везе."
+msgstr[2] "Једном уклоњен, наставак преноса ће захтевати датотеке торената или магнетне везе."
+
+#: ../gtk/dialogs.c:118
+msgid "This torrent has not finished downloading."
+msgid_plural "These torrents have not finished downloading."
+msgstr[0] "Преузимање овог торента није завршено."
+msgstr[1] "Преузимање ових торента није завршено."
+msgstr[2] "Преузимање ових торента није завршено."
+
+#: ../gtk/dialogs.c:123
+msgid "This torrent is connected to peers."
+msgid_plural "These torrents are connected to peers."
+msgstr[0] "Овај торент је повезан са парњацима."
+msgstr[1] "Ови торенти су повезани са парњацима."
+msgstr[2] "Ови торенти су повезани са парњацима."
+
+#: ../gtk/dialogs.c:130
+msgid "One of these torrents is connected to peers."
+msgid_plural "Some of these torrents are connected to peers."
+msgstr[0] "Један од ових торента је повезан са парњацима."
+msgstr[1] "Неки од ових торента су повезани са парњацима."
+msgstr[2] "Неки од ових торента су повезани са парњацима."
+
+#: ../gtk/dialogs.c:141
+msgid "One of these torrents has not finished downloading."
+msgid_plural "Some of these torrents have not finished downloading."
+msgstr[0] "Један од ових торента није завршио преузимање."
+msgstr[1] "Неки од ових торента нису завршили преузимање."
+msgstr[2] "Неки од ових торента нису завршили преузимање."
+
+#: ../gtk/file-list.c:624 ../gtk/util.c:520
+msgid "High"
+msgstr "Висок"
+
+#: ../gtk/file-list.c:628 ../gtk/util.c:521
+msgid "Normal"
+msgstr "Уобичајен"
+
+#: ../gtk/file-list.c:632 ../gtk/util.c:522
+msgid "Low"
+msgstr "Низак"
+
+#: ../gtk/file-list.c:845
+#, c-format
+msgid "Unable to rename file as \"%s\": %s"
+msgstr "Не могу да преименујем датотеку у „%s“: %s"
+
+#. add file column
+#: ../gtk/file-list.c:957 ../gtk/msgwin.c:289
+msgid "Name"
+msgstr "Назив"
+
+#. add "size" column
+#: ../gtk/file-list.c:973
+msgid "Size"
+msgstr "Величина"
+
+#. add "progress" column
+#: ../gtk/file-list.c:984
+msgid "Have"
+msgstr "Имате"
+
+#. add "enabled" column
+#: ../gtk/file-list.c:997
+msgid "Download"
+msgstr "Преузимање"
+
+#. add priority column
+#: ../gtk/file-list.c:1012
+msgid "Priority"
+msgstr "Приоритет"
+
+#: ../gtk/filter.c:299 ../gtk/filter.c:583
+msgid "All"
+msgstr "Све"
+
+#: ../gtk/filter.c:585
+msgid "Active"
+msgstr "Активан"
+
+#: ../gtk/filter.c:590
+msgctxt "Verb"
+msgid "Verifying"
+msgstr "Проверавам"
+
+#: ../gtk/filter.c:591 ../gtk/msgwin.c:430 ../gtk/util.c:717
+msgid "Error"
+msgstr "Грешка"
+
+#: ../gtk/filter.c:880
+msgid "_Show:"
+msgstr "_Прикажи:"
+
+#: ../gtk/filter.c:884
+#, c-format
+msgid "_Show %'d of:"
+msgstr "При_кажи %'d од:"
+
+#: ../gtk/main.c:314
+#, c-format
+msgid "Error registering Transmission as a %s handler: %s"
+msgstr "Грешка при постављању Трансмисије као руководиоца за %s: %s"
+
+#: ../gtk/main.c:480
+#, c-format
+msgid "Got signal %d; trying to shut down cleanly. Do it again if it gets stuck."
+msgstr "Добих сигнал „%d“; покушавајући да извршим чисто гашење. Да урадим опет ако се понови."
+
+#: ../gtk/main.c:616
+msgid "Where to look for configuration files"
+msgstr "Где ће да потражи датотеке подешавања"
+
+#: ../gtk/main.c:617
+msgid "Start with all torrents paused"
+msgstr "Покренуће се са паузираним торентима"
+
+#: ../gtk/main.c:618
+msgid "Start minimized in notification area"
+msgstr "Покреће умањен приказ у пољу обавештења"
+
+#: ../gtk/main.c:619
+msgid "Show version number and exit"
+msgstr "Приказује број издања и излази"
+
+#: ../gtk/main.c:637 ../gtk/transmission-gtk.appdata.xml.in:11 ../gtk/transmission-gtk.desktop.in:3
+msgid "Transmission"
+msgstr "Трансмисија"
+
+#. parse the command line
+#: ../gtk/main.c:640
+msgid "[torrent files or urls]"
+msgstr "[датотеке или адресе торента]"
+
+#: ../gtk/main.c:647
+#, c-format
+msgid ""
+"%s\n"
+"Run '%s --help' to see a full list of available command line options.\n"
+msgstr ""
+"%s\n"
+"Покрените „%s --help“ да ​​видите потпун списак доступних могућности линије наредби.\n"
+
+#: ../gtk/main.c:746
+msgid "Transmission is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility."
+msgstr "Трансмисија је програм за дељење датотека. Када покренете торент, биће другима омогућен приступ тим подацима преко отпремања. Било који садржај, који будете делили, иде на вашу одговорност."
+
+#: ../gtk/main.c:749
+msgid "I _Agree"
+msgstr "С_лажем се"
+
+#: ../gtk/main.c:980
+msgid "<b>Closing Connections</b>"
+msgstr "<b>Затварам везе</b>"
+
+#: ../gtk/main.c:984
+msgid "Sending upload/download totals to tracker…"
+msgstr "Шаљем податке трагачу о укупном слању/преузимању…"
+
+#: ../gtk/main.c:988
+msgid "_Quit Now"
+msgstr "_Изађи"
+
+#: ../gtk/main.c:1038
+msgid "Couldn't add corrupt torrent"
+msgid_plural "Couldn't add corrupt torrents"
+msgstr[0] "Не могу да додам неисправан торент"
+msgstr[1] "Не могу да додам неисправне торенте"
+msgstr[2] "Не могу да додам неисправне торенте"
+
+#: ../gtk/main.c:1044
+msgid "Couldn't add duplicate torrent"
+msgid_plural "Couldn't add duplicate torrents"
+msgstr[0] "Не могу да додам већ постојећи торент"
+msgstr[1] "Не могу да додам већ постојеће торенте"
+msgstr[2] "Не могу да додам већ постојеће торенте"
+
+#: ../gtk/main.c:1363
+msgid "A fast and easy BitTorrent client"
+msgstr "Брз и једноставан програм БитТорента"
+
+#: ../gtk/main.c:1364
+msgid "Copyright (c) The Transmission Project"
+msgstr "Ауторска права © Пројекат Трансмисије"
+
+#. Translators: translate "translator-credits" as your name
+#. to have it appear in the credits in the "About"
+#. dialog
+#: ../gtk/main.c:1370
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Krzysztof Klimonda https://launchpad.net/~kklimonda\n"
+"  Milan https://launchpad.net/~mpmp\n"
+"  Miloš Popović https://launchpad.net/~gpopac\n"
+"  Saša Pavić https://launchpad.net/~provalia\n"
+"  Svetozar Žikić https://launchpad.net/~sizikic\n"
+"  Vladimir Lazic https://launchpad.net/~vlazic\n"
+"  momcilo https://launchpad.net/~momcilo-majic\n"
+"  voja15 https://launchpad.net/~vojajanjic\n"
+"  Ђорђе Васиљевић https://launchpad.net/~susexe\n"
+"  Мирослав Николић https://launchpad.net/~lipek\n"
+"  Никола Павловић https://launchpad.net/~nikola825"
+
+#: ../gtk/makemeta-ui.c:70
+#, c-format
+msgid "Creating \"%s\""
+msgstr "Стварам „%s“"
+
+#: ../gtk/makemeta-ui.c:74
+#, c-format
+msgid "Created \"%s\"!"
+msgstr "Направио сам „%s“!"
+
+#: ../gtk/makemeta-ui.c:78
+#, c-format
+msgid "Error: invalid announce URL \"%s\""
+msgstr "Грешка: неисправна адреса објављивања „%s“"
+
+#: ../gtk/makemeta-ui.c:82
+msgid "Cancelled"
+msgstr "Отказано"
+
+#: ../gtk/makemeta-ui.c:86
+#, c-format
+msgid "Error reading \"%s\": %s"
+msgstr "Грешка читања „%s“: %s"
+
+#: ../gtk/makemeta-ui.c:90
+#, c-format
+msgid "Error writing \"%s\": %s"
+msgstr "Грешка писања „%s“: %s"
+
+#. how much data we've scanned through to generate checksums
+#: ../gtk/makemeta-ui.c:113
+#, c-format
+msgid "Scanned %s"
+msgstr "Прегледао сам %s"
+
+#: ../gtk/makemeta-ui.c:183 ../gtk/makemeta-ui.c:434
+msgid "New Torrent"
+msgstr "Нови торент"
+
+#: ../gtk/makemeta-ui.c:194
+msgid "Creating torrent…"
+msgstr "Стварам торент…"
+
+#: ../gtk/makemeta-ui.c:304
+msgid "No source selected"
+msgstr "Извор није изабран"
+
+#: ../gtk/makemeta-ui.c:310
+#, c-format
+msgid "%1$s; %2$'d File"
+msgid_plural "%1$s; %2$'d Files"
+msgstr[0] "%1$s; %2$'d датотека"
+msgstr[1] "%1$s; %2$'d датотеке"
+msgstr[2] "%1$s; %2$'d датотека"
+
+#: ../gtk/makemeta-ui.c:315
+#, c-format
+msgid "%1$'d Piece @ %2$s"
+msgid_plural "%1$'d Pieces @ %2$s"
+msgstr[0] "%1$'d део @ %2$s"
+msgstr[1] "%1$'d дела @ %2$s"
+msgstr[2] "%1$'d комада @ %2$s"
+
+#: ../gtk/makemeta-ui.c:444
+msgid "Sa_ve to:"
+msgstr "_Сачувај у:"
+
+#: ../gtk/makemeta-ui.c:450
+msgid "Source F_older:"
+msgstr "Изворна _фасцикла:"
+
+#: ../gtk/makemeta-ui.c:462
+msgid "Source _File:"
+msgstr "Изворна _датотека:"
+
+#: ../gtk/makemeta-ui.c:474
+msgid "<i>No source selected</i>"
+msgstr "<i>Извор није изабран</i>"
+
+#: ../gtk/makemeta-ui.c:478
+msgid "Properties"
+msgstr "Својства"
+
+#: ../gtk/makemeta-ui.c:480
+msgid "_Trackers:"
+msgstr "_Трагачи:"
+
+#: ../gtk/makemeta-ui.c:500
+msgid "Co_mment:"
+msgstr "_Коментар:"
+
+#: ../gtk/makemeta-ui.c:509
+msgid "_Private torrent"
+msgstr "_Приватни торент"
+
+#: ../gtk/msgwin.c:146
+#, c-format
+msgid "Couldn't save \"%s\""
+msgstr "Не могу да сачувам „%s“"
+
+#: ../gtk/msgwin.c:209
+msgid "Save Log"
+msgstr "Сачувај дневник"
+
+#: ../gtk/msgwin.c:284
+msgid "Time"
+msgstr "Време"
+
+#: ../gtk/msgwin.c:294
+msgid "Message"
+msgstr "Порука"
+
+#: ../gtk/msgwin.c:432
+msgid "Debug"
+msgstr "Исправљање грешака"
+
+#: ../gtk/msgwin.c:457
+msgid "Message Log"
+msgstr "Дневник рада"
+
+#: ../gtk/msgwin.c:491
+msgid "Level"
+msgstr "Ниво"
+
+#: ../gtk/notify.c:207
+msgid "Open File"
+msgstr "Отвори датотеку"
+
+#: ../gtk/notify.c:212
+msgid "Open Folder"
+msgstr "Отвори фасциклу"
+
+#: ../gtk/notify.c:217
+msgid "Torrent Complete"
+msgstr "Торент је преузет"
+
+#: ../gtk/notify.c:233
+msgid "Torrent Added"
+msgstr "Торент је додат"
+
+#: ../gtk/open-dialog.c:256
+msgid "Torrent files"
+msgstr "Датотеке торента"
+
+#: ../gtk/open-dialog.c:261
+msgid "All files"
+msgstr "Све датотеке"
+
+#. make the dialog
+#: ../gtk/open-dialog.c:284
+msgid "Torrent Options"
+msgstr "Опције торента"
+
+#: ../gtk/open-dialog.c:301 ../gtk/tr-prefs.c:275
+msgid "Mo_ve .torrent file to the trash"
+msgstr "_Премести .торент датотеку у корпу"
+
+#: ../gtk/open-dialog.c:303
+msgid "_Start when added"
+msgstr "_Покрени при додавању"
+
+#. "torrent file" row
+#: ../gtk/open-dialog.c:318
+msgid "_Torrent file:"
+msgstr "_Датотека торента:"
+
+#: ../gtk/open-dialog.c:321
+msgid "Select Source File"
+msgstr "Изаберите датотеку торента"
+
+#: ../gtk/open-dialog.c:331
+msgid "_Destination folder:"
+msgstr "_Одредишна фасцикла:"
+
+#: ../gtk/open-dialog.c:334
+msgid "Select Destination Folder"
+msgstr "Изаберите одредишну фасциклу"
+
+#: ../gtk/open-dialog.c:455
+msgid "Open a Torrent"
+msgstr "Отворите торент"
+
+#: ../gtk/open-dialog.c:466
+msgid "Show _options dialog"
+msgstr "Прикажи прозорче _опција"
+
+#: ../gtk/open-dialog.c:518
+msgid "Open URL"
+msgstr "Отвори адресу"
+
+#: ../gtk/open-dialog.c:524
+msgid "Open torrent from URL"
+msgstr "Отворите торент са адресе"
+
+#: ../gtk/open-dialog.c:529
+msgid "_URL"
+msgstr "_Адреса"
+
+#: ../gtk/relocate.c:60
+#, c-format
+msgid "Moving \"%s\""
+msgstr "Премештам „%s“"
+
+#: ../gtk/relocate.c:76
+msgid "Couldn't move torrent"
+msgstr "Не могу да преместим торент"
+
+#: ../gtk/relocate.c:111
+msgid "This may take a moment…"
+msgstr "Ово може да потраје…"
+
+#: ../gtk/relocate.c:139 ../gtk/relocate.c:153
+msgid "Set Torrent Location"
+msgstr "Постави путању торента"
+
+#: ../gtk/relocate.c:146
+msgid "Location"
+msgstr "Путања"
+
+#: ../gtk/relocate.c:156
+msgid "Torrent _location:"
+msgstr "_Путања торента:"
+
+#: ../gtk/relocate.c:157
+msgid "_Move from the current folder"
+msgstr "Премести из _тренутне фасцикле"
+
+#: ../gtk/relocate.c:160
+msgid "Local data is _already there"
+msgstr "Преузети подаци су _већ тамо"
+
+#: ../gtk/stats.c:69 ../gtk/stats.c:150
+#, c-format
+msgid "Started %'d time"
+msgid_plural "Started %'d times"
+msgstr[0] "Програм је покренут %'d пут"
+msgstr[1] "Програм је покренут %'d пута"
+msgstr[2] "Програм је покренут %'d пута"
+
+#: ../gtk/stats.c:91
+msgid "Reset your statistics?"
+msgstr "Да поништим ваше статистике?"
+
+#: ../gtk/stats.c:92
+msgid "These statistics are for your information only. Resetting them doesn't affect the statistics logged by your BitTorrent trackers."
+msgstr "Статистички подаци су само за ваше информисање.  Њихово поништавање не захвата статистику коју су записали ваши БитТорент трагачи."
+
+#: ../gtk/stats.c:96 ../gtk/stats.c:123
+msgid "_Reset"
+msgstr "_Поништи"
+
+#: ../gtk/stats.c:123 ../gtk/tr-window.c:687
+msgid "Statistics"
+msgstr "Статистика"
+
+#: ../gtk/stats.c:129
+msgid "Current Session"
+msgstr "Текућа сесија"
+
+#: ../gtk/stats.c:141 ../gtk/stats.c:166
+msgid "Ratio:"
+msgstr "Однос размене:"
+
+#: ../gtk/stats.c:145 ../gtk/stats.c:170
+msgid "Duration:"
+msgstr "Трајање:"
+
+#: ../gtk/stats.c:149
+msgid "Total"
+msgstr "Укупно"
+
+#. %1$s is how much we've got,
+#. %2$s is how much we'll have when done,
+#. %3$s%% is a percentage of the two
+#: ../gtk/torrent-cell-renderer.c:59
+#, c-format
+msgid "%1$s of %2$s (%3$s%%)"
+msgstr "%1$s од %2$s (%3$s%%)"
+
+#. %1$s is how much we've got,
+#. %2$s is the torrent's total size,
+#. %3$s%% is a percentage of the two,
+#. %4$s is how much we've uploaded,
+#. %5$s is our upload-to-download ratio,
+#. %6$s is the ratio we want to reach before we stop uploading
+#: ../gtk/torrent-cell-renderer.c:75
+#, c-format
+msgid "%1$s of %2$s (%3$s%%), uploaded %4$s (Ratio: %5$s Goal: %6$s)"
+msgstr "%1$s од %2$s (%3$s%%), послато је %4$s (однос размене: %5$s, жељени однос: %6$s)"
+
+#. %1$s is how much we've got,
+#. %2$s is the torrent's total size,
+#. %3$s%% is a percentage of the two,
+#. %4$s is how much we've uploaded,
+#. %5$s is our upload-to-download ratio
+#: ../gtk/torrent-cell-renderer.c:91
+#, c-format
+msgid "%1$s of %2$s (%3$s%%), uploaded %4$s (Ratio: %5$s)"
+msgstr "%1$s од %2$s (%3$s%%), послато је %4$s (однос размене: %5$s)"
+
+#. %1$s is the torrent's total size,
+#. %2$s is how much we've uploaded,
+#. %3$s is our upload-to-download ratio,
+#. %4$s is the ratio we want to reach before we stop uploading
+#: ../gtk/torrent-cell-renderer.c:108
+#, c-format
+msgid "%1$s, uploaded %2$s (Ratio: %3$s Goal: %4$s)"
+msgstr "%1$s, послато је %2$s (однос размене: %3$s, жељени однос: %4$s)"
+
+#. %1$s is the torrent's total size,
+#. %2$s is how much we've uploaded,
+#. %3$s is our upload-to-download ratio
+#: ../gtk/torrent-cell-renderer.c:120
+#, c-format
+msgid "%1$s, uploaded %2$s (Ratio: %3$s)"
+msgstr "%1$s, послато је %2$s (однос размене: %3$s)"
+
+#: ../gtk/torrent-cell-renderer.c:135
+msgid "Remaining time unknown"
+msgstr "Није познато колико времена преостаје"
+
+#. time remaining
+#: ../gtk/torrent-cell-renderer.c:142
+#, c-format
+msgid "%s remaining"
+msgstr "Преостало време: %s"
+
+#. down speed, down symbol, up speed, up symbol
+#: ../gtk/torrent-cell-renderer.c:162
+#, c-format
+msgid "%1$s %2$s  %3$s %4$s"
+msgstr "%1$s %2$s  %3$s %4$s"
+
+#. up speed, up symbol
+#: ../gtk/torrent-cell-renderer.c:171
+#, c-format
+msgid "%1$s  %2$s"
+msgstr "%1$s  %2$s"
+
+#: ../gtk/torrent-cell-renderer.c:175
+msgid "Stalled"
+msgstr "Заустављено"
+
+#: ../gtk/torrent-cell-renderer.c:207
+#, c-format
+msgid "Verifying local data (%.1f%% tested)"
+msgstr "Проверавам преузете податке (%.1f%% је проверено)"
+
+#: ../gtk/torrent-cell-renderer.c:236
+#, c-format
+msgid "Tracker gave a warning: \"%s\""
+msgstr "Пратилац даје упозорење: „%s“"
+
+#: ../gtk/torrent-cell-renderer.c:237
+#, c-format
+msgid "Tracker gave an error: \"%s\""
+msgstr "Трагач је пријавио грешку: „%s“"
+
+#: ../gtk/torrent-cell-renderer.c:238
+#, c-format
+msgid "Error: %s"
+msgstr "Грешка: %s"
+
+#. Downloading metadata from 2 peer (s)(50% done)
+#: ../gtk/torrent-cell-renderer.c:262
+#, c-format
+msgid "Downloading metadata from %1$'d %2$s (%3$d%% done)"
+msgstr "Преузимам мета-податке од %1$'d %2$s (%3$d%% завршено)"
+
+#: ../gtk/torrent-cell-renderer.c:263 ../gtk/torrent-cell-renderer.c:269 ../gtk/torrent-cell-renderer.c:282
+msgid "peer"
+msgid_plural "peers"
+msgstr[0] "парњака"
+msgstr[1] "парњака"
+msgstr[2] "парњака"
+
+#. Downloading from 2 of 3 peer (s) and 2 webseed (s)
+#: ../gtk/torrent-cell-renderer.c:268
+#, c-format
+msgid "Downloading from %1$'d of %2$'d %3$s and %4$'d %5$s"
+msgstr "Преузимам од %1$'d од укупно %2$'d %3$s и %4$'d %5$s"
+
+#: ../gtk/torrent-cell-renderer.c:270 ../gtk/torrent-cell-renderer.c:276
+msgid "web seed"
+msgid_plural "web seeds"
+msgstr[0] "веб сејача"
+msgstr[1] "веб сејача"
+msgstr[2] "веб сејача"
+
+#. Downloading from 3 web seed (s)
+#: ../gtk/torrent-cell-renderer.c:275
+#, c-format
+msgid "Downloading from %1$'d %2$s"
+msgstr "Преузимам од %1$'d %2$s"
+
+#. Downloading from 2 of 3 peer (s)
+#: ../gtk/torrent-cell-renderer.c:281
+#, c-format
+msgid "Downloading from %1$'d of %2$'d %3$s"
+msgstr "Преузимам од %1$'d од укупно %2$'d %3$s"
+
+#: ../gtk/torrent-cell-renderer.c:289
+#, c-format
+msgid "Seeding to %1$'d of %2$'d connected peer"
+msgid_plural "Seeding to %1$'d of %2$'d connected peers"
+msgstr[0] "Сејем ка %1$'d од %2$'d повезаног парњака"
+msgstr[1] "Сејем ка %1$'d од %2$'d повезана парњака"
+msgstr[2] "Сејем ка %1$'d од %2$'d повезаних парњака"
+
+#: ../gtk/tr-core.c:1241
+#, c-format
+msgid "Couldn't read \"%s\": %s"
+msgstr "Не могу да прочитам „%s“: %s"
+
+#: ../gtk/tr-core.c:1337
+#, c-format
+msgid "Skipping unknown torrent \"%s\""
+msgstr "Прескачем непознати торент „%s“"
+
+#: ../gtk/tr-core.c:1612
+msgid "Inhibiting desktop hibernation"
+msgstr "Забрањујем замрзавање радне површи"
+
+#: ../gtk/tr-core.c:1616
+#, c-format
+msgid "Couldn't inhibit desktop hibernation: %s"
+msgstr "Не могу да забраним замрзавање радне површи: %s"
+
+#: ../gtk/tr-core.c:1649
+msgid "Allowing desktop hibernation"
+msgstr "Допуштам замразавање радне површи"
+
+#: ../gtk/tr-icon.c:57
+msgid "Idle"
+msgstr "Неактиван"
+
+#: ../gtk/tr-icon.c:80 ../gtk/tr-icon.c:102
+#, c-format
+msgid " (Limit: %s)"
+msgstr " (Ограничење: %s)"
+
+#. %1$s: current upload speed
+#. * %2$s: current upload limit, if any
+#. * %3$s: current download speed
+#. * %4$s: current download limit, if any
+#: ../gtk/tr-icon.c:109
+#, c-format
+msgid ""
+"Transmission\n"
+"Up: %1$s %2$s\n"
+"Down: %3$s %4$s"
+msgstr ""
+"Трансмисија\n"
+"Слање: %1$s %2$s\n"
+"Преузимање: %3$s %4$s"
+
+#: ../gtk/tr-prefs.c:258
+msgctxt "Gerund"
+msgid "Adding"
+msgstr "Додавање"
+
+#: ../gtk/tr-prefs.c:260
+msgid "Automatically add .torrent files _from:"
+msgstr "Самостално додај .torrent дато_теке из:"
+
+#: ../gtk/tr-prefs.c:267
+msgid "Show the Torrent Options _dialog"
+msgstr "Прикажи прозорче за оп_ције торента"
+
+#: ../gtk/tr-prefs.c:271
+msgid "_Start added torrents"
+msgstr "По_крени додате торенте"
+
+#: ../gtk/tr-prefs.c:280
+msgid "Save to _Location:"
+msgstr "Сачувај _у путању:"
+
+#: ../gtk/tr-prefs.c:287
+msgid "Download Queue"
+msgstr "Редослед преузимања"
+
+#: ../gtk/tr-prefs.c:289
+msgid "Ma_ximum active downloads:"
+msgstr "Највише покренути_х преузимања:"
+
+#: ../gtk/tr-prefs.c:293
+msgid "Downloads sharing data in the last _N minutes are active:"
+msgstr "Преузимања која активно деле податке у последњих _Н минута:"
+
+#: ../gtk/tr-prefs.c:298 ../libtransmission/torrent.c:2170
+msgid "Incomplete"
+msgstr "Делимично"
+
+#: ../gtk/tr-prefs.c:300
+msgid "Append \"._part\" to incomplete files' names"
+msgstr "_Додај „.part“ на називе недовршених датотека"
+
+#: ../gtk/tr-prefs.c:304
+msgid "Keep _incomplete torrents in:"
+msgstr "Задржи _недовршене торенте у:"
+
+#: ../gtk/tr-prefs.c:311
+msgid "Call scrip_t when torrent is completed:"
+msgstr "Позови скрип_ту када је торент завршен:"
+
+#: ../gtk/tr-prefs.c:334
+msgid "Limits"
+msgstr "Ограничења"
+
+#: ../gtk/tr-prefs.c:336
+msgid "Stop seeding at _ratio:"
+msgstr "Прекини сејање при _односу размене:"
+
+#: ../gtk/tr-prefs.c:343
+msgid "Stop seeding if idle for _N minutes:"
+msgstr "Заустави сејање ако је неактиван N _минута:"
+
+#: ../gtk/tr-prefs.c:365 ../gtk/tr-prefs.c:1258
+msgid "Desktop"
+msgstr "Радна површ"
+
+#: ../gtk/tr-prefs.c:367
+msgid "_Inhibit hibernation when torrents are active"
+msgstr "_Забрани замрзавање када су торенти активни"
+
+#: ../gtk/tr-prefs.c:371
+msgid "Show Transmission icon in the _notification area"
+msgstr "Прикажи _иконицу Трансмисије у области за обавештења"
+
+#: ../gtk/tr-prefs.c:376
+msgid "Notification"
+msgstr "Обавештење"
+
+#: ../gtk/tr-prefs.c:378
+msgid "Show a notification when torrents are a_dded"
+msgstr "Прикажи обавештење када су _додати торенти"
+
+#: ../gtk/tr-prefs.c:382
+msgid "Show a notification when torrents _finish"
+msgstr "Прикажи обавештење када су торенти _завршени"
+
+#: ../gtk/tr-prefs.c:386
+msgid "Play a _sound when torrents finish"
+msgstr "Пусти _звук када се заврше торенти"
+
+#: ../gtk/tr-prefs.c:412
+#, c-format
+msgid "Blocklist contains %'d rule"
+msgid_plural "Blocklist contains %'d rules"
+msgstr[0] "Списак забрана садржи %'d правило"
+msgstr[1] "Списак забрана садржи %'d правила"
+msgstr[2] "Списак забрана садржи %'d правила"
+
+#: ../gtk/tr-prefs.c:446
+#, c-format
+msgid "Blocklist has %'d rule."
+msgid_plural "Blocklist has %'d rules."
+msgstr[0] "Списак забрана има %'d правило."
+msgstr[1] "Списак забрана има %'d правила."
+msgstr[2] "Списак забрана има %'d правила."
+
+#: ../gtk/tr-prefs.c:450
+msgid "<b>Unable to update.</b>"
+msgstr "<b>Ажурирање није могуће.</b>"
+
+#: ../gtk/tr-prefs.c:450
+msgid "<b>Update succeeded!</b>"
+msgstr "<b>Ажурирање је успешно обављено!</b>"
+
+#: ../gtk/tr-prefs.c:461
+msgid "Update Blocklist"
+msgstr "Ажурирање списка забрана"
+
+#: ../gtk/tr-prefs.c:463
+msgid "Getting new blocklist…"
+msgstr "Преузимам нови списак забрана…"
+
+#: ../gtk/tr-prefs.c:488
+msgid "Allow encryption"
+msgstr "Дозволи шифровање"
+
+#: ../gtk/tr-prefs.c:488
+msgid "Prefer encryption"
+msgstr "Дај предност шифровању"
+
+#: ../gtk/tr-prefs.c:489
+msgid "Require encryption"
+msgstr "Захтевај шифровање"
+
+#: ../gtk/tr-prefs.c:511 ../gtk/tr-prefs.c:1256
+msgid "Privacy"
+msgstr "Приватност"
+
+#: ../gtk/tr-prefs.c:513
+msgid "_Encryption mode:"
+msgstr "Режим _шифровања:"
+
+#: ../gtk/tr-prefs.c:518
+msgid "Blocklist"
+msgstr "Списак забрана"
+
+#: ../gtk/tr-prefs.c:520
+msgid "Enable _blocklist:"
+msgstr "Укључи списак _забрана:"
+
+#: ../gtk/tr-prefs.c:534
+msgid "_Update"
+msgstr "_Ажурирај"
+
+#: ../gtk/tr-prefs.c:546
+msgid "Enable _automatic updates"
+msgstr "Омогући _самостално ажурирање"
+
+#: ../gtk/tr-prefs.c:747
+msgid "Remote Control"
+msgstr "Даљинско управљање"
+
+#. "enabled" checkbutton
+#: ../gtk/tr-prefs.c:750
+msgid "Allow _remote access"
+msgstr "Дозволи даљински п_риступ"
+
+#: ../gtk/tr-prefs.c:756
+msgid "_Open web client"
+msgstr "_Отвори веб програм"
+
+#: ../gtk/tr-prefs.c:765
+msgid "HTTP _port:"
+msgstr "ХТТП _прикључник:"
+
+#. require authentication
+#: ../gtk/tr-prefs.c:769
+msgid "Use _authentication"
+msgstr "Користи потврђивање _идентитета"
+
+#. username
+#: ../gtk/tr-prefs.c:777
+msgid "_Username:"
+msgstr "_Корисник:"
+
+#. password
+#: ../gtk/tr-prefs.c:784
+msgid "Pass_word:"
+msgstr "_Лозинка:"
+
+#. require authentication
+#: ../gtk/tr-prefs.c:792
+msgid "Only allow these IP a_ddresses:"
+msgstr "Дозволи само ове ИП а_дресе:"
+
+#: ../gtk/tr-prefs.c:816
+msgid "IP addresses may use wildcards, such as 192.168.*.*"
+msgstr "ИП адресе могу да користе знаке замене, као нпр. 192.168.*.*"
+
+#: ../gtk/tr-prefs.c:835
+msgid "Addresses:"
+msgstr "Адресе:"
+
+#: ../gtk/tr-prefs.c:935
+msgid "Every Day"
+msgstr "Сваког дана"
+
+#: ../gtk/tr-prefs.c:936
+msgid "Weekdays"
+msgstr "Радним данима"
+
+#: ../gtk/tr-prefs.c:937
+msgid "Weekends"
+msgstr "Викендом"
+
+#: ../gtk/tr-prefs.c:938
+msgid "Sunday"
+msgstr "Недељом"
+
+#: ../gtk/tr-prefs.c:939
+msgid "Monday"
+msgstr "Понедељком"
+
+#: ../gtk/tr-prefs.c:940
+msgid "Tuesday"
+msgstr "Уторком"
+
+#: ../gtk/tr-prefs.c:941
+msgid "Wednesday"
+msgstr "Средом"
+
+#: ../gtk/tr-prefs.c:942
+msgid "Thursday"
+msgstr "Четвртком"
+
+#: ../gtk/tr-prefs.c:943
+msgid "Friday"
+msgstr "Петком"
+
+#: ../gtk/tr-prefs.c:944
+msgid "Saturday"
+msgstr "Суботом"
+
+#: ../gtk/tr-prefs.c:975
+msgid "Speed Limits"
+msgstr "Ограничења брзине"
+
+#: ../gtk/tr-prefs.c:977
+#, c-format
+msgid "_Upload (%s):"
+msgstr "_Слање (%s):"
+
+#: ../gtk/tr-prefs.c:984
+#, c-format
+msgid "_Download (%s):"
+msgstr "_Преузимање (%s):"
+
+#: ../gtk/tr-prefs.c:993
+msgid "Alternative Speed Limits"
+msgstr "Заменско ограничењe брзине"
+
+#: ../gtk/tr-prefs.c:1002
+msgid "Override normal speed limits manually or at scheduled times"
+msgstr "Препиши основна ограничења брзине ручно или у заказано време"
+
+#: ../gtk/tr-prefs.c:1009
+#, c-format
+msgid "U_pload (%s):"
+msgstr "_Слање (%s):"
+
+#: ../gtk/tr-prefs.c:1013
+#, c-format
+msgid "Do_wnload (%s):"
+msgstr "_Преузимање (%s):"
+
+#: ../gtk/tr-prefs.c:1017
+msgid "_Scheduled times:"
+msgstr "Планирано _време: од"
+
+#: ../gtk/tr-prefs.c:1022
+msgid " _to "
+msgstr " _до "
+
+#: ../gtk/tr-prefs.c:1033
+msgid "_On days:"
+msgstr "_Данима:"
+
+#: ../gtk/tr-prefs.c:1064 ../gtk/tr-prefs.c:1137 ../gtk/tr-prefs.c:1219
+msgid "Status unknown"
+msgstr "Стање је непознато"
+
+#: ../gtk/tr-prefs.c:1090
+msgid "Port is <b>closed</b>"
+msgstr "Прикључник је <b>затворен</b>"
+
+#: ../gtk/tr-prefs.c:1090
+msgid "Port is <b>open</b>"
+msgstr "Прикључник је <b>отворен</b>"
+
+#: ../gtk/tr-prefs.c:1104
+msgid "<i>Testing TCP port…</i>"
+msgstr "<i>Проверавам ТЦП прикључник…</i>"
+
+#: ../gtk/tr-prefs.c:1130
+msgid "Listening Port"
+msgstr "Долазни прикључник"
+
+#: ../gtk/tr-prefs.c:1132
+msgid "_Port used for incoming connections:"
+msgstr "Прикључник за _надолазеће везе:"
+
+#: ../gtk/tr-prefs.c:1140
+msgid "Te_st Port"
+msgstr "_Испробај прикључник"
+
+#: ../gtk/tr-prefs.c:1147
+msgid "Pick a _random port every time Transmission is started"
+msgstr "_Изабери насумичан прикључник при сваком покретању Трансмисије"
+
+#: ../gtk/tr-prefs.c:1151
+msgid "Use UPnP or NAT-PMP port _forwarding from my router"
+msgstr "Користи УПнП или НАТ-ПМП _прослеђивање прикључника са мог усмеривача"
+
+#: ../gtk/tr-prefs.c:1156
+msgid "Peer Limits"
+msgstr "Ограничења парњака"
+
+#: ../gtk/tr-prefs.c:1159
+msgid "Maximum peers per _torrent:"
+msgstr "Највише парњака по _торенту:"
+
+#: ../gtk/tr-prefs.c:1161
+msgid "Maximum peers _overall:"
+msgstr "Највише парњака на _вези:"
+
+#: ../gtk/tr-prefs.c:1167
+msgid "Enable _uTP for peer communication"
+msgstr "Омогући _u-ТП за комуницирање парњака"
+
+#: ../gtk/tr-prefs.c:1169
+msgid "uTP is a tool for reducing network congestion."
+msgstr "u-ТП је алат за смањење загушења мреже."
+
+#: ../gtk/tr-prefs.c:1174
+msgid "Use PE_X to find more peers"
+msgstr "Користи ПЕ_КС за налажење више парњака"
+
+#: ../gtk/tr-prefs.c:1176
+msgid "PEX is a tool for exchanging peer lists with the peers you're connected to."
+msgstr "ПЕКС је алат за размену списка парњака са парњацима на које сте повезани."
+
+#: ../gtk/tr-prefs.c:1180
+msgid "Use _DHT to find more peers"
+msgstr "Користи Д_ХТ за налажење више парњака"
+
+#: ../gtk/tr-prefs.c:1182
+msgid "DHT is a tool for finding peers without a tracker."
+msgstr "DHT је алат за налажење парњака без трагача."
+
+#: ../gtk/tr-prefs.c:1186
+msgid "Use _Local Peer Discovery to find more peers"
+msgstr "Користи месно _откривање парњака да пронађеш више парњака"
+
+#: ../gtk/tr-prefs.c:1188
+msgid "LPD is a tool for finding peers on your local network."
+msgstr "ЛОП је алат за проналажење парњака на вашој локалној мрежи."
+
+#: ../gtk/tr-prefs.c:1244
+msgid "Transmission Preferences"
+msgstr "Подешавања Трансмисије"
+
+#: ../gtk/tr-prefs.c:1254
+msgctxt "Gerund"
+msgid "Downloading"
+msgstr "Преузимање"
+
+#: ../gtk/tr-prefs.c:1255
+msgctxt "Gerund"
+msgid "Seeding"
+msgstr "Сејање"
+
+#: ../gtk/tr-prefs.c:1257
+msgid "Network"
+msgstr "Мрежа"
+
+#: ../gtk/tr-prefs.c:1259
+msgid "Remote"
+msgstr "Даљински"
+
+#: ../gtk/tr-window.c:127
+msgid "Torrent"
+msgstr "Торент"
+
+#: ../gtk/tr-window.c:227
+msgid "Total Ratio"
+msgstr "Укупан однос"
+
+#: ../gtk/tr-window.c:228
+msgid "Session Ratio"
+msgstr "Однос сесије"
+
+#: ../gtk/tr-window.c:229
+msgid "Total Transfer"
+msgstr "Укупан пренос"
+
+#: ../gtk/tr-window.c:230
+msgid "Session Transfer"
+msgstr "Пренос сесије"
+
+#: ../gtk/tr-window.c:255
+#, c-format
+msgid ""
+"Click to disable Alternative Speed Limits\n"
+" (%1$s down, %2$s up)"
+msgstr ""
+"Кликните да онемогућите алтернативна ограничења брзине\n"
+" (%1$s доле, %2$s горе)"
+
+#: ../gtk/tr-window.c:256
+#, c-format
+msgid ""
+"Click to enable Alternative Speed Limits\n"
+" (%1$s down, %2$s up)"
+msgstr ""
+"Кликните да омогућите алтернативна ограничења брзине\n"
+" (%1$s доле, %2$s горе)"
+
+#: ../gtk/tr-window.c:310
+#, c-format
+msgid "Tracker will allow requests in %s"
+msgstr "Трагач ће дозволити захтеве за %s"
+
+#: ../gtk/tr-window.c:380
+msgid "Unlimited"
+msgstr "неограничено"
+
+#: ../gtk/tr-window.c:451
+msgid "Seed Forever"
+msgstr "Сеј за стално"
+
+#: ../gtk/tr-window.c:489
+msgid "Limit Download Speed"
+msgstr "Ограничи брзину преузимања на:"
+
+#: ../gtk/tr-window.c:493
+msgid "Limit Upload Speed"
+msgstr "Ограничи брзину слања на:"
+
+#: ../gtk/tr-window.c:500
+msgid "Stop Seeding at Ratio"
+msgstr "Прекини сејање при односу"
+
+#: ../gtk/tr-window.c:533
+#, c-format
+msgid "Stop at Ratio (%s)"
+msgstr "Престани при односу од (%s)"
+
+#: ../gtk/tr-window.c:761 ../gtk/tr-window.c:787
+#, c-format
+msgid "Ratio: %s"
+msgstr "Однос размене: %s"
+
+#. Translators: "size|" is here for disambiguation. Please remove it from your translation.
+#. %1$s is the size of the data we've downloaded
+#. %2$s is the size of the data we've uploaded
+#: ../gtk/tr-window.c:771
+#, c-format
+msgid "Down: %1$s, Up: %2$s"
+msgstr "Преузето је: %1$s, послато је: %2$s"
+
+#. Translators: "size|" is here for disambiguation. Please remove it from your translation.
+#. %1$s is the size of the data we've downloaded
+#. %2$s is the size of the data we've uploaded
+#: ../gtk/tr-window.c:781
+#, c-format
+msgid "size|Down: %1$s, Up: %2$s"
+msgstr "Преузето је: %1$s, послато је: %2$s"
+
+#: ../gtk/transmission-gtk.appdata.xml.in:12 ../gtk/transmission-gtk.desktop.in:5
+msgid "Download and share files over BitTorrent"
+msgstr "Преузимајте и размењујте датотеке преко БитТорент протокола"
+
+#. Translators: these are the application description paragraphs in the AppData file.
+#: ../gtk/transmission-gtk.appdata.xml.in:16
+msgid "BitTorrent is a peer-to-peer file-sharing protocol that is commonly used to distribute large amounts of data between multiple users."
+msgstr "БитТорен је парњачки протокол за дељење датотека који се обично користи за дистрибуцију великих количина података између више корисника."
+
+#: ../gtk/transmission-gtk.appdata.xml.in:20
+msgid "Transmission is a BitTorrent client with an easy-to-use frontend on top a cross-platform backend. Native frontends are available for OS X and Windows, as well as command line and web frontends."
+msgstr "Трансмисија је БитТорент протокол са лако употребљивим предњим делом који радњи са позадинцима на више платформи. Домаћи предњи делови су доступни за Мек-ОС, Виндоус као и предњи делови за веб и командну линију."
+
+#: ../gtk/transmission-gtk.appdata.xml.in:26
+msgid "Notable features of Transmission include support for Local Peer Discovery, encryption, DHT, µTP, PEX and Magnet Link."
+msgstr "У издвојене могућности Трансмисије спада подршка за откривање локалних парњака, шифровање, DHT,  µTP, PEX и магнетне везе."
+
+#: ../gtk/transmission-gtk.desktop.in:4
+msgid "BitTorrent Client"
+msgstr "БитТорент програм"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: ../gtk/transmission-gtk.desktop.in:7
+msgid "torrents;downloading;uploading;share;sharing;"
+msgstr "torrents;downloading;uploading;share;sharing;торенти;преузимање;даунлоудовање;отпремање;аплоудовање;дељење;шеровање;preuzimanje;daunloudovanje;otpremanje;aploudovanje;deljenje;šerovanje;"
+
+#: ../gtk/transmission-gtk.desktop.in:21
+msgid "Start Transmission with All Torrents Paused"
+msgstr "Покрени Трансмисију и заустави све торенте"
+
+#: ../gtk/transmission-gtk.desktop.in:25
+msgid "Start Transmission Minimized"
+msgstr "Покрени умањену Трансмисију"
+
+#: ../gtk/util.c:36
+msgid "KiB"
+msgstr "KiB"
+
+#: ../gtk/util.c:37
+msgid "MiB"
+msgstr "MiB"
+
+#: ../gtk/util.c:38
+msgid "GiB"
+msgstr "GiB"
+
+#: ../gtk/util.c:39
+msgid "TiB"
+msgstr "TiB"
+
+#: ../gtk/util.c:42
+msgid "kB"
+msgstr "kB"
+
+#: ../gtk/util.c:43
+msgid "MB"
+msgstr "MB"
+
+#: ../gtk/util.c:44
+msgid "GB"
+msgstr "GB"
+
+#: ../gtk/util.c:45
+msgid "TB"
+msgstr "TB"
+
+#: ../gtk/util.c:48
+msgid "kB/s"
+msgstr "kB/s"
+
+#: ../gtk/util.c:49
+msgid "MB/s"
+msgstr "MB/s"
+
+#: ../gtk/util.c:50
+msgid "GB/s"
+msgstr "GB/s"
+
+#: ../gtk/util.c:51
+msgid "TB/s"
+msgstr "TB/s"
+
+#: ../gtk/util.c:122
+#, c-format
+msgid "%'d day"
+msgid_plural "%'d days"
+msgstr[0] "%'d дан"
+msgstr[1] "%'d дана"
+msgstr[2] "%'d дана"
+
+#: ../gtk/util.c:123
+#, c-format
+msgid "%'d hour"
+msgid_plural "%'d hours"
+msgstr[0] "%'d сат"
+msgstr[1] "%'d сата"
+msgstr[2] "%'d сати"
+
+#: ../gtk/util.c:124
+#, c-format
+msgid "%'d minute"
+msgid_plural "%'d minutes"
+msgstr[0] "%'d минут"
+msgstr[1] "%'d минута"
+msgstr[2] "%'d минута"
+
+#: ../gtk/util.c:125
+#, c-format
+msgid "%'d second"
+msgid_plural "%'d seconds"
+msgstr[0] "%'d секунда"
+msgstr[1] "%'d секунде"
+msgstr[2] "%'d секунди"
+
+#: ../gtk/util.c:258
+#, c-format
+msgid "The torrent file \"%s\" contains invalid data."
+msgstr "Датотека торента „%s“ садржи неисправне податке."
+
+#: ../gtk/util.c:262
+#, c-format
+msgid "The torrent file \"%s\" is already in use by \"%s.\""
+msgstr "Торент датотека „%s“ се већ користи од стране „%s.“"
+
+#: ../gtk/util.c:267
+#, c-format
+msgid "The torrent file \"%s\" encountered an unknown error."
+msgstr "Датотека торента „%s“ је наишла на непознату грешку."
+
+#: ../gtk/util.c:271
+msgid "Error opening torrent"
+msgstr "Грешка отварања торента"
+
+#: ../gtk/util.c:594
+msgid "Unrecognized URL"
+msgstr "Непозната адреса"
+
+#: ../gtk/util.c:596
+#, c-format
+msgid "Transmission doesn't know how to use \"%s\""
+msgstr "Трансмисија не зна како да користи „%s“"
+
+#: ../gtk/util.c:601
+#, c-format
+msgid "This magnet link appears to be intended for something other than BitTorrent. BitTorrent magnet links have a section containing \"%s\"."
+msgstr "Ова магнетна веза изгледа да је постављена за нешто друго а не за Бит-торент. Магнетне везе Бит-торента имају одељак који садржи „%s“."
+
+#: ../gtk/util.c:723
+#, c-format
+msgid "%s free"
+msgstr "%s слободно"
+
+#: ../libtransmission/announcer-http.c:221 ../libtransmission/announcer-http.c:389
+#, c-format
+msgid "Tracker gave HTTP response code %1$ld (%2$s)"
+msgstr "Трагач је дао HTTP код одговора %1$ld (%2$s)"
+
+#: ../libtransmission/announcer-udp.c:273 ../libtransmission/announcer-udp.c:423
+msgid "Unknown error"
+msgstr "Непозната грешка"
+
+#: ../libtransmission/announcer-udp.c:513
+#, c-format
+msgid "DNS Lookup failed: %s"
+msgstr "DNS упит није успео: %s"
+
+#: ../libtransmission/announcer-udp.c:616
+msgid "Connection failed"
+msgstr "Неуспешна веза"
+
+#: ../libtransmission/announcer.c:1150 ../libtransmission/announcer.c:1469
+msgid "Could not connect to tracker"
+msgstr "Нисам могао да се повежем на трагача"
+
+#: ../libtransmission/announcer.c:1154 ../libtransmission/announcer.c:1473
+msgid "Tracker did not respond"
+msgstr "Трагач не одговара"
+
+#: ../libtransmission/announcer.c:1218
+msgid "Success"
+msgstr "Успех"
+
+#: ../libtransmission/blocklist.c:63 ../libtransmission/blocklist.c:360 ../libtransmission/utils.c:258
+#, c-format
+msgid "Couldn't read \"%1$s\": %2$s"
+msgstr "Не могу да прочитам „%1$s“: %2$s"
+
+#: ../libtransmission/blocklist.c:103
+#, c-format
+msgid "Blocklist \"%s\" contains %zu entries"
+msgstr "Списак забрана „%s“ садржи %zu ставке"
+
+#. don't try to display the actual lines - it causes issues
+#: ../libtransmission/blocklist.c:403
+#, c-format
+msgid "blocklist skipped invalid address at line %d"
+msgstr "списком забрана прескочена неисправна адреса %d. реду"
+
+#: ../libtransmission/blocklist.c:460 ../libtransmission/rpcimpl.c:1650 ../libtransmission/rpcimpl.c:1664 ../libtransmission/rpcimpl.c:1687 ../libtransmission/variant.c:1226
+#, c-format
+msgid "Couldn't save file \"%1$s\": %2$s"
+msgstr "Не могу да сачувам датотеку „%1$s“: %2$s"
+
+#: ../libtransmission/blocklist.c:466
+#, c-format
+msgid "Blocklist \"%s\" updated with %zu entries"
+msgstr "Списак забрана „%s“ је ажуриран са %zu ставке"
+
+#: ../libtransmission/fdlimit.c:168
+#, c-format
+msgid "Couldn't get directory for \"%1$s\": %2$s"
+msgstr "Нисам могао да добавим фасциклу за „%1$s“: %2$s"
+
+#: ../libtransmission/fdlimit.c:174 ../libtransmission/file-posix.c:243
+#, c-format
+msgid "Couldn't create \"%1$s\": %2$s"
+msgstr "Не могу да направим „%1$s“: %2$s"
+
+#: ../libtransmission/fdlimit.c:195
+#, c-format
+msgid "Couldn't open \"%1$s\": %2$s"
+msgstr "Не могу да отворим „%1$s“: %2$s"
+
+#: ../libtransmission/fdlimit.c:207
+msgid "full"
+msgstr "пун"
+
+#: ../libtransmission/fdlimit.c:212
+msgid "sparse"
+msgstr "проређен"
+
+#: ../libtransmission/fdlimit.c:219
+#, c-format
+msgid "Couldn't preallocate file \"%1$s\" (%2$s, size: %3$<PRIu64>): %4$s"
+msgstr "Нисам могао да презахватим датотеку \"%1$s\" (%2$s, величина: %3$<PRIu64>): %4$s"
+
+#: ../libtransmission/fdlimit.c:224
+#, c-format
+msgid "Preallocated file \"%1$s\" (%2$s, size: %3$<PRIu64>)"
+msgstr "Презахваћена датотека \"%1$s\" (%2$s, величина: %3$<PRIu64>)"
+
+#: ../libtransmission/fdlimit.c:235
+#, c-format
+msgid "Couldn't truncate \"%1$s\": %2$s"
+msgstr "Не могу да скратим „%1$s“: %2$s"
+
+#: ../libtransmission/fdlimit.c:553
+#, c-format
+msgid "Couldn't create socket: %s"
+msgstr "Не могу да направим прикључницу: %s"
+
+#: ../libtransmission/file-posix.c:153
+#, c-format
+msgid "File \"%s\" is in the way"
+msgstr "Датотека „%s“ је на путу"
+
+#: ../libtransmission/makemeta.c:54
+#, c-format
+msgid "Torrent Creator is skipping file \"%s\": %s"
+msgstr "Творац торента је прескочио датотеку „%s“: %s"
+
+#: ../libtransmission/makemeta.c:209
+#, c-format
+msgid "Failed to set piece size to %s, leaving it at %s"
+msgstr "Нисам успео да подесим величину комада на %s, остављам га на %s"
+
+#: ../libtransmission/metainfo.c:759
+#, c-format
+msgid "Invalid metadata entry \"%s\""
+msgstr "Неисправна ставка метаподатака „%s“"
+
+#: ../libtransmission/natpmp.c:30
+msgid "Port Forwarding (NAT-PMP)"
+msgstr "Прослеђивање прикључника (NAT-PMP)"
+
+#: ../libtransmission/natpmp.c:73
+#, c-format
+msgid "%s succeeded (%d)"
+msgstr "%s је успешно обављено (%d)"
+
+#: ../libtransmission/natpmp.c:138
+#, c-format
+msgid "Found public address \"%s\""
+msgstr "Пронађох јавну адресу „%s“"
+
+#: ../libtransmission/natpmp.c:173
+#, c-format
+msgid "no longer forwarding port %d"
+msgstr "више не прослеђујем прикључник %d"
+
+#: ../libtransmission/natpmp.c:222
+#, c-format
+msgid "Port %d forwarded successfully"
+msgstr "Прикључник %d је успешно прослеђен"
+
+#: ../libtransmission/net.c:323
+#, c-format
+msgid "Couldn't set source address %s on %<PRIdMAX>: %s"
+msgstr "Нисам успео да подесим изворну адресу %s на %<PRIdMAX>: %s"
+
+#: ../libtransmission/net.c:339
+#, c-format
+msgid "Couldn't connect socket %<PRIdMAX> to %s, port %d (errno %d - %s)"
+msgstr "Не могу да повежем сокет %<PRIdMAX> на %s, порт %d (бр. греш. %d - %s)"
+
+#: ../libtransmission/net.c:436
+msgid "Is another copy of Transmission already running?"
+msgstr "Да ли је Трансмисија већ покренута?"
+
+#: ../libtransmission/net.c:445
+#, c-format
+msgid "Couldn't bind port %d on %s: %s"
+msgstr "Не могу да повежем прикључник %d на %s: %s"
+
+#: ../libtransmission/net.c:449
+#, c-format
+msgid "Couldn't bind port %d on %s: %s (%s)"
+msgstr "Не могу да повежем прикључник %d на %s: %s (%s)"
+
+#: ../libtransmission/peer-msgs.c:2134
+#, c-format
+msgid "Please Verify Local Data! Piece #%zu is corrupt."
+msgstr "Проверите месне податке! Комад #%zu је оштећен."
+
+#: ../libtransmission/platform.c:472
+#, c-format
+msgid "Searching for web interface file \"%s\""
+msgstr "Тражим датотеку веб интерфејса \"%s\""
+
+#: ../libtransmission/port-forwarding.c:29
+msgid "Port Forwarding"
+msgstr "Прослеђивање прикључника"
+
+#: ../libtransmission/port-forwarding.c:57
+msgid "Starting"
+msgstr "Покрећем"
+
+#: ../libtransmission/port-forwarding.c:60
+msgid "Forwarded"
+msgstr "Прослеђен је"
+
+#: ../libtransmission/port-forwarding.c:63
+msgid "Stopping"
+msgstr "Прекидам"
+
+#: ../libtransmission/port-forwarding.c:66
+msgid "Not forwarded"
+msgstr "Није прослеђен"
+
+#: ../libtransmission/port-forwarding.c:106 ../libtransmission/torrent.c:2302
+#, c-format
+msgid "State changed from \"%1$s\" to \"%2$s\""
+msgstr "Стање је промењено из „%1$s“ у „%2$s“"
+
+#: ../libtransmission/port-forwarding.c:196
+msgid "Stopped"
+msgstr "Заустављен је"
+
+#: ../libtransmission/rpc-server.c:1096
+#, c-format
+msgid "Couldn't find settings key \"%s\""
+msgstr "Нисам могао наћи кључ подешавања \"%s\""
+
+#: ../libtransmission/rpc-server.c:1230
+#, c-format
+msgid "%s is not a valid address"
+msgstr "%s није исправна адреса"
+
+#: ../libtransmission/rpc-server.c:1235
+#, c-format
+msgid "%s is not an IPv4 or IPv6 address. RPC listeners must be IPv4 or IPv6"
+msgstr "%s није исправна ИПв4 или ИПв6 адреса. RPC ослушкивачи морају бити ИПв4 или ИПв6"
+
+#: ../libtransmission/rpc-server.c:1243
+#, c-format
+msgid "Serving RPC and Web requests on %s:%d%s"
+msgstr "Опслужујем RPC и веб захтеве на %s:%d%s"
+
+#: ../libtransmission/rpc-server.c:1249
+msgid "Whitelist enabled"
+msgstr "Бели списак омогућен"
+
+#: ../libtransmission/rpc-server.c:1254
+msgid "Password required"
+msgstr "Потребна је лозинка"
+
+#: ../libtransmission/rpcimpl.c:1674
+#, c-format
+msgid "Error uncompressing blocklist: %s (%d)"
+msgstr "Грешка при распакивању списка блокираних: %s (%d)"
+
+#. first %s is the application name
+#. second %s is the version number
+#: ../libtransmission/session.c:769
+#, c-format
+msgid "%s %s started"
+msgstr "%s %s је покренута"
+
+#: ../libtransmission/session.c:2170
+#, c-format
+msgid "Loaded %d torrents"
+msgstr "Учитао сам %d торената"
+
+#: ../libtransmission/torrent-magnet.c:310
+msgid "Magnet torrent's metadata is not usable"
+msgstr "Мета-подаци магнетног торента нису употребљиви"
+
+#: ../libtransmission/torrent.c:616
+#, c-format
+msgid "Tracker warning: \"%s\""
+msgstr "Упозорење трагача: „%s“"
+
+#: ../libtransmission/torrent.c:623
+#, c-format
+msgid "Tracker error: \"%s\""
+msgstr "Грешка трагача: „%s“"
+
+#: ../libtransmission/torrent.c:916
+msgid "No data found! Ensure your drives are connected or use \"Set Location\". To re-download, remove the torrent and re-add it."
+msgstr "Нисам пронашао никакве податке! Уверите се да су ваши уређаји повезани или користите „Постави локацију“. Да поново преузмете торент, уклоните га и затим га поново додајте."
+
+#: ../libtransmission/torrent.c:1868
+msgid "Restarted manually -- disabling its seed ratio"
+msgstr "Ручно је поново покренут —— искључујем његов однос размене сејања"
+
+#: ../libtransmission/torrent.c:2078
+msgid "Removing torrent"
+msgstr "Уклањам торент"
+
+#. Translators: this is a minor point that's safe to skip over, but FYI:
+#. "Complete" and "Done" are specific, different terms in Transmission:
+#. "Complete" means we've downloaded every file in the torrent.
+#. "Done" means we're done downloading the files we wanted, but NOT all
+#. that exist
+#: ../libtransmission/torrent.c:2164
+msgid "Done"
+msgstr "Обављено"
+
+#: ../libtransmission/torrent.c:2167
+msgid "Complete"
+msgstr "Завршено"
+
+#: ../libtransmission/torrent.c:3466
+#, c-format
+msgid "Piece %<PRIu32>, which was just downloaded, failed its checksum test"
+msgstr "Комад %<PRIu32>, који је управо преузет, није прошао пробу чексуме"
+
+#: ../libtransmission/upnp.c:29
+msgid "Port Forwarding (UPnP)"
+msgstr "Прослеђивање прикључника (UPnP)"
+
+#: ../libtransmission/upnp.c:200
+#, c-format
+msgid "Found Internet Gateway Device \"%s\""
+msgstr "Пронашао сам уређај за мрежни пролаз на интернет „%s“"
+
+#: ../libtransmission/upnp.c:201
+#, c-format
+msgid "Local Address is \"%s\""
+msgstr "Месна адреса је „%s“"
+
+#: ../libtransmission/upnp.c:228
+#, c-format
+msgid "Port %d isn't forwarded"
+msgstr "Прикључник %d није прослеђен"
+
+#: ../libtransmission/upnp.c:238
+#, c-format
+msgid "Stopping port forwarding through \"%s\", service \"%s\""
+msgstr "Заустављам прослеђивање прикључника кроз „%s“, услуга „%s“"
+
+#: ../libtransmission/upnp.c:275
+#, c-format
+msgid "Port forwarding through \"%s\", service \"%s\". (local address: %s:%d)"
+msgstr "Прикључник се прослеђује кроз „%s“, услуга „%s“.  (месна адреса: %s:%d)"
+
+#: ../libtransmission/upnp.c:280
+msgid "Port forwarding successful!"
+msgstr "Прослеђивање прикључника је успешно обављено!"
+
+#: ../libtransmission/utils.c:270 ../libtransmission/utils.c:271
+msgid "Not a regular file"
+msgstr "Није исправна датотека"
+
+#. did caller give us an uninitialized val?
+#: ../libtransmission/variant.c:926
+msgid "Invalid metadata"
+msgstr "Неисправни метаподаци"
+
+#: ../libtransmission/variant.c:1211 ../libtransmission/variant.c:1235
+#, c-format
+msgid "Couldn't save temporary file \"%1$s\": %2$s"
+msgstr "Не могу да сачувам привремену датотеку „%1$s“: %2$s"
+
+#: ../libtransmission/variant.c:1221
+#, c-format
+msgid "Saved \"%s\""
+msgstr "Сачувао сам „%s“"
+
+#: ../libtransmission/variant.c:1264
+msgid "Unable to parse file content"
+msgstr "Нисам успео да обрадим садржај датотеке"
+
+#: ../libtransmission/verify.c:220
+msgid "Verifying torrent"
+msgstr "Проверавам торент"
+
+#, c-format
+#~ msgid "Server returned \"%1$ld %2$s\""
+#~ msgstr "Сервер је одговорио „%1$ld %2$s“"
+
+#, c-format
+#~ msgid "Error opening \"%s\""
+#~ msgstr "Грешка отварања „%s“"
