@@ -32,10 +32,11 @@ void tr_ctorSetSave(tr_ctor* ctor, bool saveMetadataInOurTorrentsDir);
 
 bool tr_ctorGetSave(tr_ctor const* ctor);
 
+void tr_ctorInitTorrentFastHashCheck(tr_ctor const* ctor, tr_torrent* tor);
+
 void tr_ctorInitTorrentPriorities(tr_ctor const* ctor, tr_torrent* tor);
 
 void tr_ctorInitTorrentWanted(tr_ctor const* ctor, tr_torrent* tor);
-
 /**
 ***
 **/
@@ -252,6 +253,7 @@ struct tr_torrent
     bool finishedSeedingByIdle;
 
     tr_ptrArray labels;
+    bool fastHashCheck;
 };
 
 static inline tr_torrent* tr_torrentNext(tr_session* session, tr_torrent* current)

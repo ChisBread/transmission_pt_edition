@@ -887,7 +887,7 @@ void tr_ctorSetIncompleteDir(tr_ctor* ctor, char const* directory);
 /** Set whether or not the torrent begins downloading/seeding when created.
   (Default: not paused) */
 void tr_ctorSetPaused(tr_ctor* ctor, tr_ctorMode mode, bool isPaused);
-
+void tr_ctorSetFastHashCheck(tr_ctor* ctor, tr_ctorMode mode, bool isPaused);
 /** @brief Set the priorities for files in a torrent */
 void tr_ctorSetFilePriorities(tr_ctor* ctor, tr_file_index_t const* files, tr_file_index_t fileCount, tr_priority_t priority);
 

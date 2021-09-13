@@ -26,6 +26,7 @@ struct optional_args
     bool isPaused;
     uint16_t peerLimit;
     char* downloadDir;
+    
 };
 
 /** Opaque class used when instantiating torrents.
@@ -57,6 +58,7 @@ struct tr_ctor
     tr_file_index_t normalSize;
     tr_file_index_t* high;
     tr_file_index_t highSize;
+    bool fastHashCheck;
 };
 
 /***
@@ -227,6 +229,10 @@ void tr_ctorSetFilePriorities(tr_ctor* ctor, tr_file_index_t const* files, tr_fi
     *mycount = fileCount;
 }
 
+void tr_ctorInitTorrentFastHashCheck(tr_ctor const* ctor, tr_torrent* tor)
+{
+    tor->fastHashCheck = ctor->fastHashCheck;
+}
 void tr_ctorInitTorrentPriorities(tr_ctor const* ctor, tr_torrent* tor)
 {
     for (tr_file_index_t i = 0; i < ctor->lowSize; ++i)
@@ -306,6 +312,13 @@ void tr_ctorSetSave(tr_ctor* ctor, bool saveInOurTorrentsDir)
 bool tr_ctorGetSave(tr_ctor const* ctor)
 {
     return ctor != NULL && ctor->saveInOurTorrentsDir;
+}
+
+void tr_ctorSetFastHashCheck(tr_ctor* ctor, tr_ctorMode mode, bool fastHashCheck)
+{
+    TR_ASSERT(ctor != NULL);
+    TR_ASSERT(mode == TR_FALLBACK || mode == TR_FORCE);
+    ctor->fastHashCheck = fastHashCheck;
 }
 
 void tr_ctorSetPaused(tr_ctor* ctor, tr_ctorMode mode, bool isPaused)
@@ -471,7 +484,7 @@ tr_ctor* tr_ctorNew(tr_session const* session)
 
     ctor->session = session;
     ctor->bandwidthPriority = TR_PRI_NORMAL;
-
+    ctor->fastHashCheck = false;
     if (session != NULL)
     {
         tr_ctorSetDeleteSource(ctor, tr_sessionGetDeleteSource(session));

@@ -23,5 +23,6 @@ void tr_verifyRemove(tr_torrent* tor);
 
 void tr_verifyClose(tr_session*);
 
-void tr_skipHash(void);
+void tr_setFastHash(bool);
+bool tr_getFastHash(void);
 /* @} */

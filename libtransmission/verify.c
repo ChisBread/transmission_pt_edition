@@ -29,10 +29,15 @@ enum
 {
     MSEC_TO_SLEEP_PER_SECOND_DURING_VERIFY = 100
 };
-static bool skipHashCheck = false;
-void tr_skipHash(void)
-{
-    skipHashCheck = !skipHashCheck;
+//global fask
+static bool fastHashCheck = false;
+void tr_setFastHash(bool set) 
+{   
+    fastHashCheck = set;
+}
+bool tr_getFastHash(void) 
+{   
+    return fastHashCheck;
 }
 static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 {
@@ -56,11 +61,12 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
     tr_logAddTorDbg(tor, "%s", "verifying torrent...");
     tr_torrentSetChecked(tor, 0);
 
-    bool skipHashCheckFlag = false;
+    bool fastHashCheckFlag = false;
     while (!*stopFlag && pieceIndex < tor->info.pieceCount)
     {
         // skip in [1, N-1]
-        skipHashCheckFlag = skipHashCheck && (pieceIndex > 0 && pieceIndex+1 < tor->info.pieceCount);
+        bool isCheckPiece = (pieceIndex%(tor->fastHashCheck?1024:256)) == 0 || pieceIndex+1==tor->info.pieceCount;
+        fastHashCheckFlag = (fastHashCheck || tor->fastHashCheck) && !isCheckPiece;
         uint64_t leftInPiece;
         uint64_t bytesThisPass;
         uint64_t leftInFile;
@@ -87,17 +93,19 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
         leftInFile = file->length - filePos;
         bytesThisPass = MIN(leftInFile, leftInPiece);
         bytesThisPass = MIN(bytesThisPass, buflen);
-        /* skip hash check when left in file not equal zero */
         /* read a bit */
         if (fd != TR_BAD_SYS_FILE)
         {
             uint64_t numRead;
-            if (!skipHashCheckFlag && tr_sys_file_read_at(fd, buffer, bytesThisPass, filePos, &numRead, NULL) && numRead > 0)
+            if (!fastHashCheckFlag && tr_sys_file_read_at(fd, buffer, bytesThisPass, filePos, &numRead, NULL) && numRead > 0)
             {
                 bytesThisPass = numRead;
                 tr_sha1_update(sha, buffer, bytesThisPass);
                 tr_sys_file_advise(fd, filePos, bytesThisPass, TR_SYS_FILE_ADVICE_DONT_NEED, NULL);
             }
+        } else {
+            // always check bad file
+            fastHashCheckFlag = false;
         }
 
         /* move our offsets */
@@ -115,7 +123,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 
             tr_sha1_final(sha, hash);
 
-            hasPiece = skipHashCheckFlag || memcmp(hash, tor->info.pieces[pieceIndex].hash, SHA_DIGEST_LENGTH) == 0;
+            hasPiece = fastHashCheckFlag || memcmp(hash, tor->info.pieces[pieceIndex].hash, SHA_DIGEST_LENGTH) == 0;
 
             if (hasPiece || hadPiece)
             {
@@ -153,7 +161,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
             filePos = 0;
         }
     }
-	if (skipHashCheck)
+	if (fastHashCheck)
 	{
 		tr_logAddTorInfo (tor, "%s", _("Verify with fast hash check"));
 	}
@@ -170,7 +178,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
     end = tr_time();
     tr_logAddTorDbg(tor, "Verification is done. It took %d seconds to verify %" PRIu64 " bytes (%" PRIu64 " bytes per second)",
         (int)(end - begin), tor->info.totalSize, (uint64_t)(tor->info.totalSize / (1 + (end - begin))));
-
+    tor->fastHashCheck = false;
     return changed;
 }
 
@@ -313,6 +321,10 @@ void tr_verifyRemove(tr_torrent* tor)
     tr_lock* lock = getVerifyLock();
     tr_lockLock(lock);
 
+    //doule check on/off fastHashCheck
+    if (tor->verifyState == TR_VERIFY_NOW || tor->verifyState == TR_VERIFY_WAIT) {
+        tor->fastHashCheck = true;
+    }
     if (tor == currentNode.torrent)
     {
         stopCurrent = true;

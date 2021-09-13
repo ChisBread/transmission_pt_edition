@@ -986,7 +986,7 @@ static void torrentInit(tr_torrent* tor, tr_ctor const* ctor)
 
     tr_ctorInitTorrentPriorities(ctor, tor);
     tr_ctorInitTorrentWanted(ctor, tor);
-
+    tr_ctorInitTorrentFastHashCheck(ctor, tor);
     refreshCurrentDir(tor);
 
     doStart = tor->isRunning;
@@ -1155,7 +1155,7 @@ tr_torrent* tr_torrentNew(tr_ctor const* ctor, int* setme_error, int* setme_dupl
     {
         tor = tr_new0(tr_torrent, 1);
         tor->info = tmpInfo;
-
+        tor->fastHashCheck = false;
         if (hasInfo)
         {
             tor->infoDictLength = len;

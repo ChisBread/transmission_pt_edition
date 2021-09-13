@@ -364,7 +364,7 @@ static char const* torrentReannounce(tr_session* session, tr_variant* args_in, t
     struct tr_rpc_idle_data* idle_data UNUSED)
 {
     TR_ASSERT(idle_data == NULL);
-    tr_skipHash ();
+    tr_setFastHash(!tr_getFastHash());
     int torrentCount;
     tr_torrent** torrents = getTorrents(session, args_in, &torrentCount);
 
@@ -1870,6 +1870,10 @@ static char const* torrentAdd(tr_session* session, tr_variant* args_in, tr_varia
     /* set the optional arguments */
 
     tr_variantDictFindStr(args_in, TR_KEY_cookies, &cookies, NULL);
+
+    if (tr_variantDictFindBool(args_in, TR_KEY_isFinished, &boolVal)) {
+       tr_ctorSetFastHashCheck(ctor, TR_FORCE, boolVal);
+    }
 
     if (download_dir != NULL)
     {

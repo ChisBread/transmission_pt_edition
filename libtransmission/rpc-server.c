@@ -175,6 +175,7 @@ static void handle_upload(struct evhttp_request* req, struct tr_rpc_server* serv
 
         char const* query = strchr(req->uri, '?');
         bool const paused = query != NULL && strstr(query + 1, "paused=true") != NULL;
+        bool const finished = query != NULL && strstr(query + 1, "finished=true") != NULL;
 
         extract_parts_from_multipart(req->input_headers, req->input_buffer, &parts);
         n = tr_ptrArraySize(&parts);
@@ -223,7 +224,8 @@ static void handle_upload(struct evhttp_request* req, struct tr_rpc_server* serv
                 tr_variantDictAddStr(&top, TR_KEY_method, "torrent-add");
                 args = tr_variantDictAddDict(&top, TR_KEY_arguments, 2);
                 tr_variantDictAddBool(args, TR_KEY_paused, paused);
-
+                tr_variantDictAddBool(args, TR_KEY_isFinished, finished);
+                
                 if (tr_urlIsValid(body, body_len))
                 {
                     tr_variantDictAddRaw(args, TR_KEY_filename, body, body_len);
