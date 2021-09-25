@@ -62,16 +62,14 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
     tr_torrentSetChecked(tor, 0);
 
     bool fastHashCheckFlag = false;
+    tr_piece_index_t checkPiece = 0;
     while (!*stopFlag && pieceIndex < tor->info.pieceCount)
     {
-        // skip in [1, N-1]
-        bool isCheckPiece = (pieceIndex%(tor->fastHashCheck?1024:256)) == 0 || pieceIndex+1==tor->info.pieceCount;
-        fastHashCheckFlag = (fastHashCheck || tor->fastHashCheck) && !isCheckPiece;
+
         uint64_t leftInPiece;
         uint64_t bytesThisPass;
         uint64_t leftInFile;
         tr_file const* file = &tor->info.files[fileIndex];
-
         /* if we're starting a new piece... */
         if (piecePos == 0)
         {
@@ -93,6 +91,16 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
         leftInFile = file->length - filePos;
         bytesThisPass = MIN(leftInFile, leftInPiece);
         bytesThisPass = MIN(bytesThisPass, buflen);
+        /* Check or no check? It's a question.  */
+        if(checkPiece != pieceIndex && (filePos <= tr_torPieceCountBytes(tor, pieceIndex)*2 || leftInFile <= tr_torPieceCountBytes(tor, pieceIndex)*2)) {
+            if(piecePos == 0) {
+                checkPiece = pieceIndex;
+            } else {
+                checkPiece = pieceIndex+1;
+            }
+        }
+        bool isCheckPiece = (pieceIndex%(tor->fastHashCheck?1024:256)) == 0 || pieceIndex+1==tor->info.pieceCount || pieceIndex == checkPiece;
+        fastHashCheckFlag = (fastHashCheck || tor->fastHashCheck) && !isCheckPiece;
         /* read a bit */
         if (fd != TR_BAD_SYS_FILE)
         {
