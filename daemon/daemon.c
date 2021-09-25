@@ -9,10 +9,6 @@
 #include <errno.h>
 #include <stdio.h> /* printf */
 #include <stdlib.h> /* atoi */
-#include <stdio.h>
-#include <sys/time.h>
-#include <sys/resource.h>
-#include <sys/types.h>
 #ifdef HAVE_SYSLOG
 #include <syslog.h>
 #endif
@@ -601,12 +597,6 @@ static void daemon_reconfigure(void* arg UNUSED)
         tr_sessionReloadBlocklists(mySession);
     }
 }
-void rlimit(pid_t pid) {
-    struct rlimit new_limit;
-    new_limit.rlim_cur = 8192;
-    new_limit.rlim_max = 8192;
-    prlimit(pid, RLIMIT_NOFILE, &new_limit, NULL);
-}
 static void daemon_stop(void* arg UNUSED)
 {
     event_base_loopexit(ev_base, NULL);
@@ -630,7 +620,6 @@ static int daemon_start(void* raw_arg, bool foreground)
 #endif
 
     sd_notifyf(0, "MAINPID=%d\n", (int)getpid());
-    rlimit(getpid());
     /* should go before libevent calls */
     tr_net_init();
 
