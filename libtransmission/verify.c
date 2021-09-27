@@ -41,6 +41,8 @@ bool tr_getFastHash(void)
 }
 static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 {
+    bool firstRun = true;
+retry:
     time_t end;
     tr_sha1_ctx_t sha;
     tr_sys_file_t fd = TR_BAD_SYS_FILE;
@@ -100,7 +102,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
             }
         }
         bool isCheckPiece = (pieceIndex%(tor->fastHashCheck?1024:256)) == 0 || pieceIndex+1==tor->info.pieceCount || pieceIndex == checkPiece;
-        fastHashCheckFlag = (fastHashCheck || tor->fastHashCheck) && !isCheckPiece;
+        fastHashCheckFlag = (fastHashCheck || tor->fastHashCheck) && !isCheckPiece && firstRun;
         /* read a bit */
         if (fd != TR_BAD_SYS_FILE)
         {
@@ -169,10 +171,6 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
             filePos = 0;
         }
     }
-	if (fastHashCheck)
-	{
-		tr_logAddTorInfo (tor, "%s", _("Verify with fast hash check"));
-	}
     /* cleanup */
     if (fd != TR_BAD_SYS_FILE)
     {
@@ -181,6 +179,15 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 
     tr_sha1_final(sha, NULL);
     free(buffer);
+    /* changed retry */
+    if(changed && firstRun && (fastHashCheck || tor->fastHashCheck)) {
+        firstRun = false;
+        goto retry;
+    }
+	if (fastHashCheck)
+	{
+		tr_logAddTorInfo (tor, "%s", _("Verify with fast hash check"));
+	}
 
     /* stopwatch */
     end = tr_time();
