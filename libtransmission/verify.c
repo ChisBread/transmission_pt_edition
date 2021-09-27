@@ -42,7 +42,7 @@ bool tr_getFastHash(void)
 static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 {
     bool firstRun = true;
-retry:
+retry:{
     time_t end;
     tr_sha1_ctx_t sha;
     tr_sys_file_t fd = TR_BAD_SYS_FILE;
@@ -179,6 +179,7 @@ retry:
 
     tr_sha1_final(sha, NULL);
     free(buffer);
+    
     /* changed retry */
     if(changed && firstRun && (fastHashCheck || tor->fastHashCheck)) {
         firstRun = false;
@@ -195,6 +196,7 @@ retry:
         (int)(end - begin), tor->info.totalSize, (uint64_t)(tor->info.totalSize / (1 + (end - begin))));
     tor->fastHashCheck = false;
     return changed;
+    }
 }
 
 /***
