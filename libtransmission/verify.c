@@ -49,6 +49,7 @@ retry:{
     uint64_t filePos = 0;
     bool changed = false;
     bool hadPiece = false;
+    bool badResult = false;
     time_t lastSleptAt = 0;
     uint32_t piecePos = 0;
     tr_file_index_t fileIndex = 0;
@@ -134,7 +135,7 @@ retry:{
             tr_sha1_final(sha, hash);
 
             hasPiece = fastHashCheckFlag || memcmp(hash, tor->info.pieces[pieceIndex].hash, SHA_DIGEST_LENGTH) == 0;
-
+            badResult |= !hasPiece;
             if (hasPiece || hadPiece)
             {
                 tr_torrentSetHasPiece(tor, pieceIndex, hasPiece);
@@ -180,12 +181,12 @@ retry:{
     tr_sha1_final(sha, NULL);
     free(buffer);
     
-    /* changed retry */
-    if(changed && firstRun && (fastHashCheck || tor->fastHashCheck)) {
+    /* badResult retry */
+    if(badResult && firstRun && (fastHashCheck || tor->fastHashCheck)) {
         firstRun = false;
         goto retry;
     }
-	if (fastHashCheck)
+	if (fastHashCheck && firstRun)
 	{
 		tr_logAddTorInfo (tor, "%s", _("Verify with fast hash check"));
 	}
