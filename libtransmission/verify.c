@@ -69,7 +69,7 @@ static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
     bool firstRun = true;
     bool hasSameTorrent = false;
     //checking torrents in session
-    tr_torrent* walk;
+    tr_torrent* walk = NULL;
     while ((walk = tr_torrentNext(tor->session, walk)) != NULL)
     {
         if (tr_torrentGetActivity(walk) == TR_STATUS_SEED && isSameTorrent(tor, walk)) {
