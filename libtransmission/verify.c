@@ -29,8 +29,8 @@ enum
 {
     MSEC_TO_SLEEP_PER_SECOND_DURING_VERIFY = 100
 };
-//global fask
-static bool fastHashCheck = false;
+//global
+static bool fastHashCheck = true;
 void tr_setFastHash(bool set) 
 {   
     fastHashCheck = set;
@@ -39,9 +39,44 @@ bool tr_getFastHash(void)
 {   
     return fastHashCheck;
 }
+static bool isSameTorrent(tr_torrent* tor, tr_torrent* dst){
+    if(tor->info.pieceCount != dst->info.pieceCount || tor->info.fileCount != dst->info.fileCount) {
+        return false;
+    }
+    tr_piece_index_t pieceIndex = 0;
+    while(pieceIndex < tor->info.pieceCount) {
+        if(memcmp(tor->info.pieces[pieceIndex].hash, dst->info.pieces[pieceIndex].hash, SHA_DIGEST_LENGTH) != 0) {
+            return false;
+        }
+        ++pieceIndex;
+    }
+    tr_file_index_t fileIndex = 0;
+    while(fileIndex < tor->info.fileCount) {
+        char* fn1 = tr_torrentFindFile(tor, fileIndex);
+        char* fn2 = tr_torrentFindFile(dst, fileIndex);
+        bool eq = tr_strcmp0(fn1, fn2) == 0;
+        tr_free(fn1);
+        tr_free(fn2);
+        if (!eq) {
+            return false;
+        }
+        ++fileIndex;
+    }
+    return true;
+}
 static bool verifyTorrent(tr_torrent* tor, bool* stopFlag)
 {
     bool firstRun = true;
+    bool hasSameTorrent = false;
+    //checking torrents in session
+    tr_torrent* walk;
+    while ((walk = tr_torrentNext(tor->session, walk)) != NULL)
+    {
+        if (tr_torrentGetActivity(walk) == TR_STATUS_SEED && isSameTorrent(tor, walk)) {
+            hasSameTorrent = true;
+            break;
+        }
+    }
 retry:{
     time_t end;
     tr_sha1_ctx_t sha;
@@ -102,7 +137,7 @@ retry:{
                 checkPiece = pieceIndex+1;
             }
         }
-        bool isCheckPiece = (pieceIndex%(tor->fastHashCheck?1024:256)) == 0 || pieceIndex+1==tor->info.pieceCount || pieceIndex == checkPiece;
+        bool isCheckPiece = (!hasSameTorrent && (pieceIndex%(tor->fastHashCheck?1024:256)) == 0) || pieceIndex+1==tor->info.pieceCount || pieceIndex == checkPiece;
         fastHashCheckFlag = (fastHashCheck || tor->fastHashCheck) && !isCheckPiece && firstRun;
         /* read a bit */
         if (fd != TR_BAD_SYS_FILE)
