@@ -137,7 +137,7 @@ retry:{
                 checkPiece = pieceIndex+1;
             }
         }
-        bool isCheckPiece = (!hasSameTorrent && (pieceIndex%(tor->fastHashCheck?1024:256)) == 0) || pieceIndex+1==tor->info.pieceCount || pieceIndex == checkPiece;
+        bool isCheckPiece = (!hasSameTorrent && pieceIndex == checkPiece) || (pieceIndex%(hasSameTorrent?512:256)) == 0 || pieceIndex+1==tor->info.pieceCount || pieceIndex == 0;
         fastHashCheckFlag = (fastHashCheck || tor->fastHashCheck) && !isCheckPiece && firstRun;
         /* read a bit */
         if (fd != TR_BAD_SYS_FILE)
