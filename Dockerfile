@@ -9,7 +9,7 @@ RUN apk add make automake autoconf pkgconfig curl-dev libevent-dev gcc g++ git &
     rm -rf \
         /root/.cache \
         /tmp/*
-RUN sed -i `grep -n 'PEERPORT' /etc/cont-init.d/20-config | awk -F: '{print $1}'|head -n 1`' i if [ ! -z "$RPCPORT" ]; then' /etc/cont-init.d/20-config &&\
+RUN sed -i `grep -n 'PEERPORT' /etc/cont-init.d/20-config | awk -F: '{print $1}'|head -n 1`' i if [ ! -z "$RPCPORT" ]; then' /etc/cont-init.d/20-config && \
     sed -i `grep -n 'PEERPORT' /etc/cont-init.d/20-config | awk -F: '{print $1}'|head -n 1`' i     sed -i "/rpc-port/c\\    \\"rpc-port\\": $RPCPORT," /config/settings.json' /etc/cont-init.d/20-config && \
     sed -i `grep -n 'PEERPORT' /etc/cont-init.d/20-config | awk -F: '{print $1}'|head -n 1`' i fi' /etc/cont-init.d/20-config
 ENV RPCPORT=9091
