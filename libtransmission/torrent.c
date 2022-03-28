@@ -80,7 +80,7 @@ tr_torrent* tr_torrentFindFromId(tr_session* session, int id)
     if (hashmap_get(session->torrentMap, &id, sizeof(int), &result)) {
 	    tor = (tr_torrent*)result;
     }
-    if (tor->uniqueId == id){
+    if (tor && tor->uniqueId == id){
         return tor;
     }
     return NULL;
@@ -1016,7 +1016,6 @@ static void torrentInit(tr_torrent* tor, tr_ctor const* ctor)
     if (session->torrentList == NULL)
     {
         session->torrentList = tor;
-        session->torrentMap = hashmap_create();
     }
     else
     {

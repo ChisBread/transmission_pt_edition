@@ -408,7 +408,8 @@ static struct tr_key_struct const my_static[] =
     Q("watch-dir"),
     Q("watch-dir-enabled"),
     Q("webseeds"),
-    Q("webseedsSendingToUs")
+    Q("webseedsSendingToUs"),
+    Q("is_fasthash")
 };
 
 #undef Q
