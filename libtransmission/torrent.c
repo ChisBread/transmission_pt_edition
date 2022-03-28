@@ -76,15 +76,13 @@ int tr_torrentId(tr_torrent const* tor)
 tr_torrent* tr_torrentFindFromId(tr_session* session, int id)
 {
     tr_torrent* tor = NULL;
-
-    while ((tor = tr_torrentNext(session, tor)) != NULL)
-    {
-        if (tor->uniqueId == id)
-        {
-            return tor;
-        }
+    uintptr_t result;
+    if (hashmap_get(session->torrentMap, &id, sizeof(int), &result)) {
+	    tor = (tr_torrent*)result;
     }
-
+    if (tor->uniqueId == id){
+        return tor;
+    }
     return NULL;
 }
 
@@ -1015,10 +1013,10 @@ static void torrentInit(tr_torrent* tor, tr_ctor const* ctor)
 
     /* add the torrent to tr_session.torrentList */
     session->torrentCount++;
-
     if (session->torrentList == NULL)
     {
         session->torrentList = tor;
+        session->torrentMap = hashmap_create();
     }
     else
     {
@@ -1031,6 +1029,7 @@ static void torrentInit(tr_torrent* tor, tr_ctor const* ctor)
 
         it->next = tor;
     }
+    hashmap_set(session->torrentMap, &tor->uniqueId, sizeof(int), tor);
 
     /* if we don't have a local .torrent file already, assume the torrent is new */
     isNewTorrent = !tr_sys_path_exists(tor->info.torrent, NULL);
@@ -1724,6 +1723,7 @@ static void freeTorrent(tr_torrent* tor)
             }
         }
     }
+    hashmap_remove(session->torrentMap, &tor->uniqueId, sizeof(int));
 
     /* decrement the torrent count */
     TR_ASSERT(session->torrentCount >= 1);
