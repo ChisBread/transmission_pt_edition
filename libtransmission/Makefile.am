@@ -78,7 +78,8 @@ libtransmission_a_SOURCES = \
   watchdir-generic.c \
   web.c \
   webseed.c \
-  wildmat.c
+  wildmat.c \
+  map.c
 
 if USE_INOTIFY
 libtransmission_a_SOURCES += watchdir-inotify.c
@@ -178,7 +179,8 @@ noinst_HEADERS = \
   watchdir.h \
   watchdir-common.h \
   web.h \
-  webseed.h
+  webseed.h \
+  map.h
 
 TESTS = \
   bitfield-test \

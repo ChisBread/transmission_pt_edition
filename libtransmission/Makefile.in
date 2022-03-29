@@ -160,7 +160,8 @@ am__libtransmission_a_SOURCES_DIST = announcer.c announcer-http.c \
 	watchdir-inotify.c watchdir-kqueue.c file-win32.c \
 	subprocess-win32.c watchdir-win32.c file-posix.c \
 	subprocess-posix.c crypto-utils-openssl.c \
-	crypto-utils-cyassl.c crypto-utils-polarssl.c
+	crypto-utils-cyassl.c crypto-utils-polarssl.c \
+	map.c
 @USE_INOTIFY_TRUE@am__objects_1 = watchdir-inotify.$(OBJEXT)
 @USE_KQUEUE_TRUE@am__objects_2 = watchdir-kqueue.$(OBJEXT)
 @WIN32_TRUE@am__objects_3 = file-win32.$(OBJEXT) \
@@ -195,6 +196,7 @@ am_libtransmission_a_OBJECTS = announcer.$(OBJEXT) \
 	variant.$(OBJEXT) variant-benc.$(OBJEXT) \
 	variant-json.$(OBJEXT) verify.$(OBJEXT) watchdir.$(OBJEXT) \
 	watchdir-generic.$(OBJEXT) web.$(OBJEXT) webseed.$(OBJEXT) \
+	map.$(OBJEXT) \
 	wildmat.$(OBJEXT) $(am__objects_1) $(am__objects_2) \
 	$(am__objects_3) $(am__objects_4) $(am__objects_5) \
 	$(am__objects_6) $(am__objects_7)
@@ -418,7 +420,8 @@ am__depfiles_remade = ./$(DEPDIR)/ConvertUTF.Po \
 	./$(DEPDIR)/watchdir_generic_test-libtransmission-test.Po \
 	./$(DEPDIR)/watchdir_generic_test-watchdir-test.Po \
 	./$(DEPDIR)/web.Po ./$(DEPDIR)/webseed.Po \
-	./$(DEPDIR)/wildmat.Po
+	./$(DEPDIR)/wildmat.Po \
+	./$(DEPDIR)/map.Po
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -930,6 +933,7 @@ libtransmission_a_SOURCES = announcer.c announcer-http.c \
 	tr-lpd.c tr-udp.c tr-utp.c tr-getopt.c trevent.c upnp.c \
 	utils.c variant.c variant-benc.c variant-json.c verify.c \
 	watchdir.c watchdir-generic.c web.c webseed.c wildmat.c \
+	map.c \
 	$(am__append_1) $(am__append_3) $(am__append_5) \
 	$(am__append_6) $(am__append_7) $(am__append_8) \
 	$(am__append_10)
@@ -999,7 +1003,8 @@ noinst_HEADERS = \
   watchdir.h \
   watchdir-common.h \
   web.h \
-  webseed.h
+  webseed.h \
+  map.h
 
 apps_ldadd = \
   ./libtransmission.a  \
@@ -1332,6 +1337,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/web.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/webseed.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wildmat.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/map.Po@am__quote@ # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -1936,6 +1942,7 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/web.Po
 	-rm -f ./$(DEPDIR)/webseed.Po
 	-rm -f ./$(DEPDIR)/wildmat.Po
+	-rm -f ./$(DEPDIR)/map.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -2077,6 +2084,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/web.Po
 	-rm -f ./$(DEPDIR)/webseed.Po
 	-rm -f ./$(DEPDIR)/wildmat.Po
+	-rm -f ./$(DEPDIR)/map.Po
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

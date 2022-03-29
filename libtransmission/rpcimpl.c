@@ -364,7 +364,6 @@ static char const* torrentReannounce(tr_session* session, tr_variant* args_in, t
     struct tr_rpc_idle_data* idle_data UNUSED)
 {
     TR_ASSERT(idle_data == NULL);
-    tr_setFastHash(!tr_getFastHash());
     int torrentCount;
     tr_torrent** torrents = getTorrents(session, args_in, &torrentCount);
 
@@ -2596,6 +2595,20 @@ static char const* sessionClose(tr_session* session, tr_variant* args_in UNUSED,
     return NULL;
 }
 
+static char const* fasthashSet(tr_session* session, tr_variant* args_in, tr_variant* args_out UNUSED,
+    struct tr_rpc_idle_data* idle_data UNUSED)
+{
+    tr_setFastHash(!tr_getFastHash());
+    tr_variantDictAddBool(args_out, TR_KEY_is_fasthash, tr_getFastHash());
+    return NULL;
+}
+static char const* fasthashGet(tr_session* session, tr_variant* args_in, tr_variant* args_out UNUSED,
+    struct tr_rpc_idle_data* idle_data UNUSED)
+{
+    tr_variantDictAddBool(args_out, TR_KEY_is_fasthash, tr_getFastHash());
+    return NULL;
+}
+
 /***
 ****
 ***/
@@ -2631,7 +2644,9 @@ methods[] =
     { "queue-move-top", true, queueMoveTop },
     { "queue-move-up", true, queueMoveUp },
     { "queue-move-down", true, queueMoveDown },
-    { "queue-move-bottom", true, queueMoveBottom }
+    { "queue-move-bottom", true, queueMoveBottom },
+    { "fasthash-set", true, fasthashSet },
+    { "fasthash-get", true, fasthashGet }
 };
 
 static void noop_response_callback(tr_session* session UNUSED, tr_variant* response UNUSED, void* user_data UNUSED)
@@ -2672,7 +2687,7 @@ void tr_rpc_request_exec_json(tr_session* session, tr_variant const* request, tr
             result = "method name not recognized";
         }
     }
-
+    //tr_logAddError("method is %s\n", str);
     /* if we couldn't figure out which method to use, return an error */
     if (result != NULL)
     {

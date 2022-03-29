@@ -614,6 +614,7 @@ tr_session* tr_sessionInit(char const* configDir, bool messageQueuingEnabled, tr
     session->cache = tr_cacheNew(1024 * 1024 * 2);
     session->magicNumber = SESSION_MAGIC_NUMBER;
     session->session_id = tr_session_id_new();
+    session->torrentMap = hashmap_create();
     tr_bandwidthConstruct(&session->bandwidth, session, NULL);
     tr_variantInitList(&session->removedTorrents, 0);
 

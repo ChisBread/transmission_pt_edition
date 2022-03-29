@@ -409,6 +409,7 @@ enum
     TR_KEY_watch_dir_enabled,
     TR_KEY_webseeds,
     TR_KEY_webseedsSendingToUs,
+    TR_KEY_is_fasthash,
     TR_N_KEYS
 };
 

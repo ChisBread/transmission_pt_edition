@@ -19,6 +19,7 @@
 #include "net.h"
 #include "utils.h"
 #include "variant.h"
+#include "map.h"
 
 typedef enum
 {
@@ -176,7 +177,7 @@ struct tr_session
 
     int torrentCount;
     tr_torrent* torrentList;
-
+    hashmap* torrentMap;
     char* torrentDoneScript;
 
     char* configDir;

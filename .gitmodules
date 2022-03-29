@@ -1,0 +1,3 @@
+[submodule "third-party/transmission-web-control"]
+	path = third-party/transmission-web-control
+	url = git@github.com:ChisBread/transmission-web-control.git

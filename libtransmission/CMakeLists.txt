@@ -86,6 +86,7 @@ set(${PROJECT_NAME}_SOURCES
     web.c
     webseed.c
     wildmat.c
+    map.c
 )
 
 set_source_files_properties(crypto-utils-fallback.c PROPERTIES HEADER_FILE_ONLY ON)
@@ -181,6 +182,7 @@ set(${PROJECT_NAME}_PRIVATE_HEADERS
     version.h
     watchdir-common.h
     webseed.h
+    map.h
 )
 
 if(NOT ENABLE_UTP)
@@ -294,7 +296,6 @@ if(ENABLE_TESTS)
     set_property(TARGET ${TR_NAME}-test PROPERTY FOLDER "UnitTests")
 
     set(crypto-test_ADD_SOURCES crypto-test-ref.h)
-    set(subprocess-test_ADD_SOURCES subprocess-test.cmd)
 
     set(watchdir@generic-test_DEFINITIONS WATCHDIR_TEST_FORCE_GENERIC)
 
