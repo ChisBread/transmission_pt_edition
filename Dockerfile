@@ -6,7 +6,7 @@ RUN apk add make automake autoconf pkgconfig curl-dev libevent-dev gcc g++ git &
     rm -r /transmission-web-control && mv /transmission_pt_edition/third-party/transmission-web-control/src /transmission-web-control; \
     rm -r /transmission_pt_edition && \
     echo "**** cleanup ****" && \
-    apk del --purge make automake autoconf pkgconfig git gcc g++ curl-dev libevent-dev && \
+    apk del --purge make automake autoconf pkgconfig git gcc g++ curl-dev libevent-dev openssh && \
     rm -rf \
         /root/.cache \
         /tmp/*
