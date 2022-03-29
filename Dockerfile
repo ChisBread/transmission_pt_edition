@@ -1,12 +1,12 @@
 FROM linuxserver/transmission:latest
-RUN apk add make automake autoconf pkgconfig curl-dev libevent-dev gcc g++ git && \
+RUN apk update && apk add --update ca-certificates make automake autoconf pkgconfig curl-dev libevent-dev gcc g++ git && \
     cd / && git clone --recursive https://github.com/ChisBread/transmission_pt_edition && cd transmission_pt_edition ; \
     HAVE_CXX=yes ./configure --disable-nls --enable-daemon --enable-utp --disable-dependency-tracking --prefix=/usr ; \
     make && make install ; \
     rm -r /transmission-web-control && mv /transmission_pt_edition/third-party/transmission-web-control/src /transmission-web-control; \
     rm -r /transmission_pt_edition && \
     echo "**** cleanup ****" && \
-    apk del --purge make automake autoconf pkgconfig git gcc g++ curl-dev libevent-dev openssh && \
+    apk del --purge make automake autoconf pkgconfig git gcc g++ curl-dev libevent-dev && \
     rm -rf \
         /root/.cache \
         /tmp/*
