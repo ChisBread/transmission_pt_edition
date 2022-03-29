@@ -2602,6 +2602,13 @@ static char const* fasthashSet(tr_session* session, tr_variant* args_in, tr_vari
     tr_variantDictAddBool(args_out, TR_KEY_is_fasthash, tr_getFastHash());
     return NULL;
 }
+static char const* fasthashGet(tr_session* session, tr_variant* args_in, tr_variant* args_out UNUSED,
+    struct tr_rpc_idle_data* idle_data UNUSED)
+{
+    tr_variantDictAddBool(args_out, TR_KEY_is_fasthash, tr_getFastHash());
+    return NULL;
+}
+
 /***
 ****
 ***/
@@ -2638,7 +2645,8 @@ methods[] =
     { "queue-move-up", true, queueMoveUp },
     { "queue-move-down", true, queueMoveDown },
     { "queue-move-bottom", true, queueMoveBottom },
-    { "fasthash-set", true, fasthashSet }
+    { "fasthash-set", true, fasthashSet },
+    { "fasthash-get", true, fasthashGet }
 };
 
 static void noop_response_callback(tr_session* session UNUSED, tr_variant* response UNUSED, void* user_data UNUSED)
