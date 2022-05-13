@@ -399,11 +399,8 @@ static void ensureSessionFdInfoExists(tr_session* session)
         if (getrlimit(RLIMIT_NOFILE, &limit) == 0)
         {
             int const old_limit = (int)limit.rlim_cur;
-#ifdef TR_FD_SETSIZE
-            int const new_limit = MIN(limit.rlim_max, TR_FD_SETSIZE);
-#else
-            int const new_limit = MIN(limit.rlim_max, FD_SETSIZE);
-#endif
+            int const max_size = TR_FD_SETSIZE > FD_SETSIZE ? TR_FD_SETSIZE : FD_SETSIZE;
+            int const new_limit = MIN(limit.rlim_max, max_size);
             if (new_limit != old_limit)
             {
                 limit.rlim_cur = new_limit;
