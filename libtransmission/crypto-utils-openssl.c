@@ -20,6 +20,9 @@
 #include <openssl/rand.h>
 #include <openssl/ssl.h>
 #include <openssl/x509.h>
+#if OPENSSL_VERSION_MAJOR >= 3
+#include <openssl/provider.h>
+#endif
 
 #include "transmission.h"
 #include "crypto-utils.h"
@@ -184,6 +187,10 @@ static void openssl_evp_cipher_context_free(EVP_CIPHER_CTX* handle)
 
 tr_rc4_ctx_t tr_rc4_new(void)
 {
+#if OPENSSL_VERSION_MAJOR >= 3
+    OSSL_PROVIDER_load(NULL, "default");
+    OSSL_PROVIDER_load(NULL, "legacy");
+#endif
     EVP_CIPHER_CTX* handle = EVP_CIPHER_CTX_new();
 
     if (check_result(EVP_CipherInit_ex(handle, EVP_rc4(), NULL, NULL, NULL, -1)))
